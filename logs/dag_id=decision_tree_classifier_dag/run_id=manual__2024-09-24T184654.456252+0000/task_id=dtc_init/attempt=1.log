@@ -1,0 +1,18 @@
+[2024-09-24T18:46:56.021+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-24T18:46:56.035+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: decision_tree_classifier_dag.dtc_init manual__2024-09-24T18:46:54.456252+00:00 [queued]>
+[2024-09-24T18:46:56.042+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: decision_tree_classifier_dag.dtc_init manual__2024-09-24T18:46:54.456252+00:00 [queued]>
+[2024-09-24T18:46:56.043+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-24T18:46:56.052+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): dtc_init> on 2024-09-24 18:46:54.456252+00:00
+[2024-09-24T18:46:56.060+0000] {standard_task_runner.py:64} INFO - Started process 46383 to run task
+[2024-09-24T18:46:56.062+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'decision_tree_classifier_dag', 'dtc_init', 'manual__2024-09-24T18:46:54.456252+00:00', '--job-id', '450', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/hw1-checkpoint.py', '--cfg-path', '/tmp/tmpotgu1nvi']
+[2024-09-24T18:46:56.065+0000] {standard_task_runner.py:91} INFO - Job 450: Subtask dtc_init
+[2024-09-24T18:46:56.108+0000] {task_command.py:426} INFO - Running <TaskInstance: decision_tree_classifier_dag.dtc_init manual__2024-09-24T18:46:54.456252+00:00 [running]> on host 82997fc6deb7
+[2024-09-24T18:46:56.183+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='decision_tree_classifier_dag' AIRFLOW_CTX_TASK_ID='dtc_init' AIRFLOW_CTX_EXECUTION_DATE='2024-09-24T18:46:54.456252+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-24T18:46:54.456252+00:00'
+[2024-09-24T18:46:56.184+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-24T18:46:56.192+0000] {hw1-checkpoint.py:59} INFO - Train pipeline started.
+[2024-09-24T18:46:56.213+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-24T18:46:56.214+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-24T18:46:56.222+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=decision_tree_classifier_dag, task_id=dtc_init, run_id=manual__2024-09-24T18:46:54.456252+00:00, execution_date=20240924T184654, start_date=20240924T184656, end_date=20240924T184656
+[2024-09-24T18:46:56.237+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-24T18:46:56.258+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-24T18:46:56.263+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

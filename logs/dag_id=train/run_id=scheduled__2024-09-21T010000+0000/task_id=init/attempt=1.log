@@ -1,0 +1,36 @@
+[2024-09-22T09:12:07.218+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-22T09:12:07.244+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train.init scheduled__2024-09-21T01:00:00+00:00 [queued]>
+[2024-09-22T09:12:07.258+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train.init scheduled__2024-09-21T01:00:00+00:00 [queued]>
+[2024-09-22T09:12:07.261+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-22T09:12:07.279+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): init> on 2024-09-21 01:00:00+00:00
+[2024-09-22T09:12:07.293+0000] {standard_task_runner.py:64} INFO - Started process 6084 to run task
+[2024-09-22T09:12:07.298+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'train', 'init', 'scheduled__2024-09-21T01:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/1_train_dag-checkpoint.py', '--cfg-path', '/tmp/tmp7opa8lbh']
+[2024-09-22T09:12:07.301+0000] {standard_task_runner.py:91} INFO - Job 11: Subtask init
+[2024-09-22T09:12:07.372+0000] {task_command.py:426} INFO - Running <TaskInstance: train.init scheduled__2024-09-21T01:00:00+00:00 [running]> on host 7264ce263e34
+[2024-09-22T09:12:07.490+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='train' AIRFLOW_CTX_TASK_ID='init' AIRFLOW_CTX_EXECUTION_DATE='2024-09-21T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-21T01:00:00+00:00'
+[2024-09-22T09:12:07.493+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-22T09:12:07.512+0000] {1_train_dag-checkpoint.py:56} INFO - Train pipeline started.
+[2024-09-22T09:12:07.513+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-22T09:12:07.514+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-22T09:12:07.527+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=train, task_id=init, run_id=scheduled__2024-09-21T01:00:00+00:00, execution_date=20240921T010000, start_date=20240922T091207, end_date=20240922T091207
+[2024-09-22T09:12:07.592+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-22T09:12:07.635+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T09:12:07.639+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-09-22T09:30:06.089+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-22T09:30:06.118+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train.init scheduled__2024-09-21T01:00:00+00:00 [queued]>
+[2024-09-22T09:30:06.130+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train.init scheduled__2024-09-21T01:00:00+00:00 [queued]>
+[2024-09-22T09:30:06.131+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-22T09:30:06.150+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): init> on 2024-09-21 01:00:00+00:00
+[2024-09-22T09:30:06.161+0000] {standard_task_runner.py:64} INFO - Started process 8539 to run task
+[2024-09-22T09:30:06.165+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'train', 'init', 'scheduled__2024-09-21T01:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/1_train_dag-checkpoint.py', '--cfg-path', '/tmp/tmpu1juph80']
+[2024-09-22T09:30:06.169+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask init
+[2024-09-22T09:30:06.238+0000] {task_command.py:426} INFO - Running <TaskInstance: train.init scheduled__2024-09-21T01:00:00+00:00 [running]> on host 7264ce263e34
+[2024-09-22T09:30:06.363+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='train' AIRFLOW_CTX_TASK_ID='init' AIRFLOW_CTX_EXECUTION_DATE='2024-09-21T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-21T01:00:00+00:00'
+[2024-09-22T09:30:06.365+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-22T09:30:06.383+0000] {1_train_dag-checkpoint.py:56} INFO - Train pipeline started.
+[2024-09-22T09:30:06.384+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-22T09:30:06.385+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-22T09:30:06.397+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=train, task_id=init, run_id=scheduled__2024-09-21T01:00:00+00:00, execution_date=20240921T010000, start_date=20240922T093006, end_date=20240922T093006
+[2024-09-22T09:30:06.462+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-22T09:30:06.516+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-22T09:30:06.518+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

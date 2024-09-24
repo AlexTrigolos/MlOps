@@ -1,0 +1,21 @@
+[2024-09-24T18:56:33.611+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-24T18:56:33.626+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gradient_boosting_classifier_dag.gbc_save_metrics_to_s3 manual__2024-09-24T18:56:18.755545+00:00 [queued]>
+[2024-09-24T18:56:33.633+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gradient_boosting_classifier_dag.gbc_save_metrics_to_s3 manual__2024-09-24T18:56:18.755545+00:00 [queued]>
+[2024-09-24T18:56:33.634+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-24T18:56:33.646+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): gbc_save_metrics_to_s3> on 2024-09-24 18:56:18.755545+00:00
+[2024-09-24T18:56:33.655+0000] {standard_task_runner.py:64} INFO - Started process 49889 to run task
+[2024-09-24T18:56:33.657+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'gradient_boosting_classifier_dag', 'gbc_save_metrics_to_s3', 'manual__2024-09-24T18:56:18.755545+00:00', '--job-id', '494', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/hw1-checkpoint.py', '--cfg-path', '/tmp/tmplv7jxzh6']
+[2024-09-24T18:56:33.659+0000] {standard_task_runner.py:91} INFO - Job 494: Subtask gbc_save_metrics_to_s3
+[2024-09-24T18:56:33.699+0000] {task_command.py:426} INFO - Running <TaskInstance: gradient_boosting_classifier_dag.gbc_save_metrics_to_s3 manual__2024-09-24T18:56:18.755545+00:00 [running]> on host 82997fc6deb7
+[2024-09-24T18:56:33.781+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='gradient_boosting_classifier_dag' AIRFLOW_CTX_TASK_ID='gbc_save_metrics_to_s3' AIRFLOW_CTX_EXECUTION_DATE='2024-09-24T18:56:18.755545+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-24T18:56:18.755545+00:00'
+[2024-09-24T18:56:33.782+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-24T18:56:33.792+0000] {hw1-checkpoint.py:175} INFO - Save metrics...
+[2024-09-24T18:56:33.908+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:56:33.909+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:56:34.432+0000] {hw1-checkpoint.py:202} INFO - DONE!!!
+[2024-09-24T18:56:34.434+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-24T18:56:34.435+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-24T18:56:34.443+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=gradient_boosting_classifier_dag, task_id=gbc_save_metrics_to_s3, run_id=manual__2024-09-24T18:56:18.755545+00:00, execution_date=20240924T185618, start_date=20240924T185633, end_date=20240924T185634
+[2024-09-24T18:56:34.474+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-24T18:56:34.488+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-24T18:56:34.491+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

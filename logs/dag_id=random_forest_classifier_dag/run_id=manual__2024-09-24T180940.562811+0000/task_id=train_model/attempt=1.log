@@ -1,0 +1,41 @@
+[2024-09-24T18:09:49.437+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-24T18:09:49.452+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: random_forest_classifier_dag.train_model manual__2024-09-24T18:09:40.562811+00:00 [queued]>
+[2024-09-24T18:09:49.461+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: random_forest_classifier_dag.train_model manual__2024-09-24T18:09:40.562811+00:00 [queued]>
+[2024-09-24T18:09:49.463+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-24T18:09:49.477+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): train_model> on 2024-09-24 18:09:40.562811+00:00
+[2024-09-24T18:09:49.484+0000] {standard_task_runner.py:64} INFO - Started process 37271 to run task
+[2024-09-24T18:09:49.486+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'random_forest_classifier_dag', 'train_model', 'manual__2024-09-24T18:09:40.562811+00:00', '--job-id', '432', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/hw1-checkpoint.py', '--cfg-path', '/tmp/tmp6_skw1u0']
+[2024-09-24T18:09:49.488+0000] {standard_task_runner.py:91} INFO - Job 432: Subtask train_model
+[2024-09-24T18:09:49.530+0000] {task_command.py:426} INFO - Running <TaskInstance: random_forest_classifier_dag.train_model manual__2024-09-24T18:09:40.562811+00:00 [running]> on host 82997fc6deb7
+[2024-09-24T18:09:49.606+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='random_forest_classifier_dag' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2024-09-24T18:09:40.562811+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-24T18:09:40.562811+00:00'
+[2024-09-24T18:09:49.607+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-24T18:09:49.616+0000] {hw1-checkpoint.py:152} INFO - Train model...
+[2024-09-24T18:09:49.618+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/RandomForestClassifier/datasets/X_train.pkl
+[2024-09-24T18:09:49.630+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:09:49.631+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:09:50.002+0000] {hw1-checkpoint.py:78} INFO - /tmp/***_tmp_ptmtjyi0
+[2024-09-24T18:09:50.005+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/RandomForestClassifier/datasets/X_test.pkl
+[2024-09-24T18:09:50.012+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:09:50.013+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:09:50.159+0000] {hw1-checkpoint.py:78} INFO - /tmp/***_tmp_r3tpzx7_
+[2024-09-24T18:09:50.162+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/RandomForestClassifier/datasets/y_train.pkl
+[2024-09-24T18:09:50.168+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:09:50.169+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:09:50.325+0000] {hw1-checkpoint.py:78} INFO - /tmp/***_tmp_uzs27n03
+[2024-09-24T18:09:50.327+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/RandomForestClassifier/datasets/y_test.pkl
+[2024-09-24T18:09:50.333+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:09:50.334+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:09:50.684+0000] {hw1-checkpoint.py:78} INFO - /tmp/***_tmp_1kthtv08
+[2024-09-24T18:09:50.690+0000] {logging_mixin.py:188} INFO - Fitting 5 folds for each of 1 candidates, totalling 5 fits
+[2024-09-24T18:09:50.772+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=100; total time=   0.1s
+[2024-09-24T18:09:50.851+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=100; total time=   0.1s
+[2024-09-24T18:09:50.931+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=100; total time=   0.1s
+[2024-09-24T18:09:51.007+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=100; total time=   0.1s
+[2024-09-24T18:09:51.084+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=100; total time=   0.1s
+[2024-09-24T18:09:51.216+0000] {hw1-checkpoint.py:193} INFO - Finish model train.
+[2024-09-24T18:09:51.218+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-24T18:09:51.219+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-24T18:09:51.228+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=random_forest_classifier_dag, task_id=train_model, run_id=manual__2024-09-24T18:09:40.562811+00:00, execution_date=20240924T180940, start_date=20240924T180949, end_date=20240924T180951
+[2024-09-24T18:09:51.270+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-24T18:09:51.286+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-24T18:09:51.290+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

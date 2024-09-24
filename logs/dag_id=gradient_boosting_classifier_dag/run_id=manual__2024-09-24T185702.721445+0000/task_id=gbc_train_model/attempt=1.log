@@ -1,0 +1,56 @@
+[2024-09-24T18:57:12.419+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-24T18:57:12.433+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gradient_boosting_classifier_dag.gbc_train_model manual__2024-09-24T18:57:02.721445+00:00 [queued]>
+[2024-09-24T18:57:12.439+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gradient_boosting_classifier_dag.gbc_train_model manual__2024-09-24T18:57:02.721445+00:00 [queued]>
+[2024-09-24T18:57:12.440+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-24T18:57:12.450+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): gbc_train_model> on 2024-09-24 18:57:02.721445+00:00
+[2024-09-24T18:57:12.457+0000] {standard_task_runner.py:64} INFO - Started process 50352 to run task
+[2024-09-24T18:57:12.460+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'gradient_boosting_classifier_dag', 'gbc_train_model', 'manual__2024-09-24T18:57:02.721445+00:00', '--job-id', '505', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/hw1-checkpoint.py', '--cfg-path', '/tmp/tmps8_p86lr']
+[2024-09-24T18:57:12.462+0000] {standard_task_runner.py:91} INFO - Job 505: Subtask gbc_train_model
+[2024-09-24T18:57:12.504+0000] {task_command.py:426} INFO - Running <TaskInstance: gradient_boosting_classifier_dag.gbc_train_model manual__2024-09-24T18:57:02.721445+00:00 [running]> on host 82997fc6deb7
+[2024-09-24T18:57:12.582+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='gradient_boosting_classifier_dag' AIRFLOW_CTX_TASK_ID='gbc_train_model' AIRFLOW_CTX_EXECUTION_DATE='2024-09-24T18:57:02.721445+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-24T18:57:02.721445+00:00'
+[2024-09-24T18:57:12.583+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-24T18:57:12.592+0000] {hw1-checkpoint.py:145} INFO - Train model...
+[2024-09-24T18:57:12.593+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/GradientBoostingClassifier/datasets/X_train.pkl
+[2024-09-24T18:57:12.600+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:57:12.601+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:57:12.951+0000] {hw1-checkpoint.py:86} INFO - /tmp/***_tmp_zqjrxzxg
+[2024-09-24T18:57:12.954+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/GradientBoostingClassifier/datasets/X_test.pkl
+[2024-09-24T18:57:12.962+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:57:12.963+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:57:13.123+0000] {hw1-checkpoint.py:86} INFO - /tmp/***_tmp_p2em3prw
+[2024-09-24T18:57:13.125+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/GradientBoostingClassifier/datasets/y_train.pkl
+[2024-09-24T18:57:13.132+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:57:13.133+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:57:13.314+0000] {hw1-checkpoint.py:86} INFO - /tmp/***_tmp_uxht31gx
+[2024-09-24T18:57:13.316+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/GradientBoostingClassifier/datasets/y_test.pkl
+[2024-09-24T18:57:13.323+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:57:13.323+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:57:13.933+0000] {hw1-checkpoint.py:86} INFO - /tmp/***_tmp_6lz_4sds
+[2024-09-24T18:57:13.939+0000] {logging_mixin.py:188} INFO - Fitting 5 folds for each of 4 candidates, totalling 20 fits
+[2024-09-24T18:57:14.174+0000] {logging_mixin.py:188} INFO - [CV] END .learning_rate=0.001, max_depth=17, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:14.375+0000] {logging_mixin.py:188} INFO - [CV] END .learning_rate=0.001, max_depth=17, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:14.572+0000] {logging_mixin.py:188} INFO - [CV] END .learning_rate=0.001, max_depth=17, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:14.775+0000] {logging_mixin.py:188} INFO - [CV] END .learning_rate=0.001, max_depth=17, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:14.991+0000] {logging_mixin.py:188} INFO - [CV] END .learning_rate=0.001, max_depth=17, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:15.333+0000] {logging_mixin.py:188} INFO - [CV] END .learning_rate=0.001, max_depth=19, n_estimators=50; total time=   0.3s
+[2024-09-24T18:57:15.590+0000] {logging_mixin.py:188} INFO - [CV] END .learning_rate=0.001, max_depth=19, n_estimators=50; total time=   0.3s
+[2024-09-24T18:57:15.858+0000] {logging_mixin.py:188} INFO - [CV] END .learning_rate=0.001, max_depth=19, n_estimators=50; total time=   0.3s
+[2024-09-24T18:57:16.072+0000] {logging_mixin.py:188} INFO - [CV] END .learning_rate=0.001, max_depth=19, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:16.283+0000] {logging_mixin.py:188} INFO - [CV] END .learning_rate=0.001, max_depth=19, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:16.442+0000] {logging_mixin.py:188} INFO - [CV] END .....learning_rate=1, max_depth=17, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:16.591+0000] {logging_mixin.py:188} INFO - [CV] END .....learning_rate=1, max_depth=17, n_estimators=50; total time=   0.1s
+[2024-09-24T18:57:16.756+0000] {logging_mixin.py:188} INFO - [CV] END .....learning_rate=1, max_depth=17, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:16.900+0000] {logging_mixin.py:188} INFO - [CV] END .....learning_rate=1, max_depth=17, n_estimators=50; total time=   0.1s
+[2024-09-24T18:57:17.047+0000] {logging_mixin.py:188} INFO - [CV] END .....learning_rate=1, max_depth=17, n_estimators=50; total time=   0.1s
+[2024-09-24T18:57:17.202+0000] {logging_mixin.py:188} INFO - [CV] END .....learning_rate=1, max_depth=19, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:17.348+0000] {logging_mixin.py:188} INFO - [CV] END .....learning_rate=1, max_depth=19, n_estimators=50; total time=   0.1s
+[2024-09-24T18:57:17.505+0000] {logging_mixin.py:188} INFO - [CV] END .....learning_rate=1, max_depth=19, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:17.654+0000] {logging_mixin.py:188} INFO - [CV] END .....learning_rate=1, max_depth=19, n_estimators=50; total time=   0.1s
+[2024-09-24T18:57:17.806+0000] {logging_mixin.py:188} INFO - [CV] END .....learning_rate=1, max_depth=19, n_estimators=50; total time=   0.2s
+[2024-09-24T18:57:18.047+0000] {hw1-checkpoint.py:171} INFO - Finish model train.
+[2024-09-24T18:57:18.048+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-24T18:57:18.049+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-24T18:57:18.055+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=gradient_boosting_classifier_dag, task_id=gbc_train_model, run_id=manual__2024-09-24T18:57:02.721445+00:00, execution_date=20240924T185702, start_date=20240924T185712, end_date=20240924T185718
+[2024-09-24T18:57:18.091+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-24T18:57:18.106+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-24T18:57:18.110+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

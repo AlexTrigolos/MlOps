@@ -1,0 +1,17 @@
+[2024-09-22T13:54:33.128+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-22T13:54:33.205+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train_dag.init manual__2024-09-22T13:54:29.667302+00:00 [queued]>
+[2024-09-22T13:54:33.263+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train_dag.init manual__2024-09-22T13:54:29.667302+00:00 [queued]>
+[2024-09-22T13:54:33.268+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-22T13:54:33.301+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): init> on 2024-09-22 13:54:29.667302+00:00
+[2024-09-22T13:54:33.332+0000] {standard_task_runner.py:64} INFO - Started process 56890 to run task
+[2024-09-22T13:54:33.345+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'train_dag', 'init', 'manual__2024-09-22T13:54:29.667302+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/train_dag.py', '--cfg-path', '/tmp/tmpnbwtdm5s']
+[2024-09-22T13:54:33.355+0000] {standard_task_runner.py:91} INFO - Job 20: Subtask init
+[2024-09-22T13:54:33.453+0000] {task_command.py:426} INFO - Running <TaskInstance: train_dag.init manual__2024-09-22T13:54:29.667302+00:00 [running]> on host 7264ce263e34
+[2024-09-22T13:54:33.615+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='train_dag' AIRFLOW_CTX_TASK_ID='init' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T13:54:29.667302+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T13:54:29.667302+00:00'
+[2024-09-22T13:54:33.617+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-22T13:54:33.725+0000] {train_dag.py:58} INFO - Train pipeline started.
+[2024-09-22T13:54:33.782+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-22T13:54:33.783+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-22T13:54:33.796+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=train_dag, task_id=init, run_id=manual__2024-09-22T13:54:29.667302+00:00, execution_date=20240922T135429, start_date=20240922T135433, end_date=20240922T135433
+[2024-09-22T13:54:33.848+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-22T13:54:33.864+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

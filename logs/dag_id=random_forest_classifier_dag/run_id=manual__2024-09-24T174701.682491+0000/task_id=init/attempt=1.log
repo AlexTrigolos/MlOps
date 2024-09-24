@@ -1,0 +1,18 @@
+[2024-09-24T17:47:03.190+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-24T17:47:03.206+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: random_forest_classifier_dag.init manual__2024-09-24T17:47:01.682491+00:00 [queued]>
+[2024-09-24T17:47:03.213+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: random_forest_classifier_dag.init manual__2024-09-24T17:47:01.682491+00:00 [queued]>
+[2024-09-24T17:47:03.216+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-24T17:47:03.228+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): init> on 2024-09-24 17:47:01.682491+00:00
+[2024-09-24T17:47:03.236+0000] {standard_task_runner.py:64} INFO - Started process 30361 to run task
+[2024-09-24T17:47:03.238+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'random_forest_classifier_dag', 'init', 'manual__2024-09-24T17:47:01.682491+00:00', '--job-id', '385', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/hw1-checkpoint.py', '--cfg-path', '/tmp/tmpz2mtizy6']
+[2024-09-24T17:47:03.240+0000] {standard_task_runner.py:91} INFO - Job 385: Subtask init
+[2024-09-24T17:47:03.287+0000] {task_command.py:426} INFO - Running <TaskInstance: random_forest_classifier_dag.init manual__2024-09-24T17:47:01.682491+00:00 [running]> on host 82997fc6deb7
+[2024-09-24T17:47:03.362+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='random_forest_classifier_dag' AIRFLOW_CTX_TASK_ID='init' AIRFLOW_CTX_EXECUTION_DATE='2024-09-24T17:47:01.682491+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-24T17:47:01.682491+00:00'
+[2024-09-24T17:47:03.364+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-24T17:47:03.373+0000] {hw1-checkpoint.py:87} INFO - Train pipeline started.
+[2024-09-24T17:47:03.396+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-24T17:47:03.397+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-24T17:47:03.404+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=random_forest_classifier_dag, task_id=init, run_id=manual__2024-09-24T17:47:01.682491+00:00, execution_date=20240924T174701, start_date=20240924T174703, end_date=20240924T174703
+[2024-09-24T17:47:03.453+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-24T17:47:03.473+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-24T17:47:03.478+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

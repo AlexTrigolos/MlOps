@@ -1,0 +1,31 @@
+[2024-09-24T18:45:46.755+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-24T18:45:46.768+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gradient_boosting_classifier_dag.gbc_prepare_data manual__2024-09-24T18:45:41.461143+00:00 [queued]>
+[2024-09-24T18:45:46.774+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gradient_boosting_classifier_dag.gbc_prepare_data manual__2024-09-24T18:45:41.461143+00:00 [queued]>
+[2024-09-24T18:45:46.776+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-24T18:45:46.785+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): gbc_prepare_data> on 2024-09-24 18:45:41.461143+00:00
+[2024-09-24T18:45:46.792+0000] {standard_task_runner.py:64} INFO - Started process 45851 to run task
+[2024-09-24T18:45:46.795+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'gradient_boosting_classifier_dag', 'gbc_prepare_data', 'manual__2024-09-24T18:45:41.461143+00:00', '--job-id', '441', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/hw1-checkpoint.py', '--cfg-path', '/tmp/tmp2_3gz50n']
+[2024-09-24T18:45:46.797+0000] {standard_task_runner.py:91} INFO - Job 441: Subtask gbc_prepare_data
+[2024-09-24T18:45:46.834+0000] {task_command.py:426} INFO - Running <TaskInstance: gradient_boosting_classifier_dag.gbc_prepare_data manual__2024-09-24T18:45:41.461143+00:00 [running]> on host 82997fc6deb7
+[2024-09-24T18:45:46.896+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='gradient_boosting_classifier_dag' AIRFLOW_CTX_TASK_ID='gbc_prepare_data' AIRFLOW_CTX_EXECUTION_DATE='2024-09-24T18:45:41.461143+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-24T18:45:41.461143+00:00'
+[2024-09-24T18:45:46.897+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-24T18:45:46.906+0000] {hw1-checkpoint.py:88} INFO - Prepare data...
+[2024-09-24T18:45:46.907+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/GradientBoostingClassifier/datasets/dataset.pkl
+[2024-09-24T18:45:46.914+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:45:46.915+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:45:47.301+0000] {hw1-checkpoint.py:53} INFO - /tmp/***_tmp_j97ysfk2
+[2024-09-24T18:45:47.356+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:45:47.357+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:45:47.690+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:45:47.691+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:45:47.839+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:45:47.841+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:45:47.987+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:45:47.988+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:45:48.338+0000] {hw1-checkpoint.py:123} INFO - Prepared data.
+[2024-09-24T18:45:48.339+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-24T18:45:48.341+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-24T18:45:48.356+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=gradient_boosting_classifier_dag, task_id=gbc_prepare_data, run_id=manual__2024-09-24T18:45:41.461143+00:00, execution_date=20240924T184541, start_date=20240924T184546, end_date=20240924T184548
+[2024-09-24T18:45:48.415+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-24T18:45:48.434+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-24T18:45:48.438+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

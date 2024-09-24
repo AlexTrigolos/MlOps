@@ -1,0 +1,55 @@
+[2024-09-24T20:22:15.697+0000] {processor.py:161} INFO - Started process (PID=502) to work on /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:22:15.699+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 for tasks to queue
+[2024-09-24T20:22:15.724+0000] {logging_mixin.py:188} INFO - [2024-09-24T20:22:15.723+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:22:15.761+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:22:15.783+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 took 0.097 seconds
+[2024-09-24T20:22:48.069+0000] {processor.py:161} INFO - Started process (PID=776) to work on /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:22:48.070+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 for tasks to queue
+[2024-09-24T20:22:48.071+0000] {logging_mixin.py:188} INFO - [2024-09-24T20:22:48.071+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:22:48.092+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:22:48.104+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 took 0.039 seconds
+[2024-09-24T20:27:59.007+0000] {processor.py:161} INFO - Started process (PID=506) to work on /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:27:59.008+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 for tasks to queue
+[2024-09-24T20:27:59.010+0000] {logging_mixin.py:188} INFO - [2024-09-24T20:27:59.010+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:27:59.033+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:27:59.042+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 took 0.039 seconds
+[2024-09-24T20:28:31.955+0000] {processor.py:161} INFO - Started process (PID=780) to work on /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:28:31.957+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 for tasks to queue
+[2024-09-24T20:28:31.959+0000] {logging_mixin.py:188} INFO - [2024-09-24T20:28:31.959+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:28:31.985+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:28:31.994+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 took 0.044 seconds
+[2024-09-24T20:29:04.179+0000] {processor.py:161} INFO - Started process (PID=1054) to work on /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:29:04.180+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 for tasks to queue
+[2024-09-24T20:29:04.181+0000] {logging_mixin.py:188} INFO - [2024-09-24T20:29:04.181+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:29:04.206+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:29:04.216+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 took 0.041 seconds
+[2024-09-24T20:29:35.996+0000] {processor.py:161} INFO - Started process (PID=1328) to work on /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:29:35.998+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 for tasks to queue
+[2024-09-24T20:29:36.046+0000] {logging_mixin.py:188} INFO - [2024-09-24T20:29:36.046+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:29:36.209+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:29:36.230+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 took 0.240 seconds
+[2024-09-24T20:30:08.102+0000] {processor.py:161} INFO - Started process (PID=1602) to work on /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:30:08.103+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 for tasks to queue
+[2024-09-24T20:30:08.106+0000] {logging_mixin.py:188} INFO - [2024-09-24T20:30:08.105+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:30:08.144+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:30:08.158+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 took 0.061 seconds
+[2024-09-24T20:30:39.842+0000] {processor.py:161} INFO - Started process (PID=1876) to work on /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:30:39.843+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 for tasks to queue
+[2024-09-24T20:30:39.846+0000] {logging_mixin.py:188} INFO - [2024-09-24T20:30:39.845+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:30:39.879+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:30:39.888+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 took 0.050 seconds
+[2024-09-24T20:31:12.792+0000] {processor.py:161} INFO - Started process (PID=2150) to work on /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:31:12.793+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 for tasks to queue
+[2024-09-24T20:31:12.795+0000] {logging_mixin.py:188} INFO - [2024-09-24T20:31:12.795+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:31:12.830+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:31:12.839+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 took 0.051 seconds
+[2024-09-24T20:31:44.225+0000] {processor.py:161} INFO - Started process (PID=2423) to work on /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:31:44.226+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 for tasks to queue
+[2024-09-24T20:31:44.227+0000] {logging_mixin.py:188} INFO - [2024-09-24T20:31:44.227+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:31:44.248+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:31:44.257+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 took 0.036 seconds
+[2024-09-24T20:32:29.962+0000] {processor.py:161} INFO - Started process (PID=2703) to work on /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:32:29.963+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 for tasks to queue
+[2024-09-24T20:32:29.964+0000] {logging_mixin.py:188} INFO - [2024-09-24T20:32:29.964+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:32:29.986+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17
+[2024-09-24T20:32:29.995+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/0/2/c/b/6/02cb629f6ebb3e98446e2ad06c364c7831a1cbf5ddd60e1111e04b17 took 0.037 seconds

@@ -1,0 +1,75 @@
+[2024-09-24T18:47:12.495+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-24T18:47:12.509+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: random_forest_classifier_dag.rfc_train_model manual__2024-09-24T18:47:03.919011+00:00 [queued]>
+[2024-09-24T18:47:12.516+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: random_forest_classifier_dag.rfc_train_model manual__2024-09-24T18:47:03.919011+00:00 [queued]>
+[2024-09-24T18:47:12.518+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-24T18:47:12.529+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): rfc_train_model> on 2024-09-24 18:47:03.919011+00:00
+[2024-09-24T18:47:12.537+0000] {standard_task_runner.py:64} INFO - Started process 46729 to run task
+[2024-09-24T18:47:12.539+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'random_forest_classifier_dag', 'rfc_train_model', 'manual__2024-09-24T18:47:03.919011+00:00', '--job-id', '462', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/hw1-checkpoint.py', '--cfg-path', '/tmp/tmpzcikx7gs']
+[2024-09-24T18:47:12.541+0000] {standard_task_runner.py:91} INFO - Job 462: Subtask rfc_train_model
+[2024-09-24T18:47:12.577+0000] {task_command.py:426} INFO - Running <TaskInstance: random_forest_classifier_dag.rfc_train_model manual__2024-09-24T18:47:03.919011+00:00 [running]> on host 82997fc6deb7
+[2024-09-24T18:47:12.640+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='random_forest_classifier_dag' AIRFLOW_CTX_TASK_ID='rfc_train_model' AIRFLOW_CTX_EXECUTION_DATE='2024-09-24T18:47:03.919011+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-24T18:47:03.919011+00:00'
+[2024-09-24T18:47:12.641+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-24T18:47:12.650+0000] {hw1-checkpoint.py:127} INFO - Train model...
+[2024-09-24T18:47:12.650+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/RandomForestClassifier/datasets/X_train.pkl
+[2024-09-24T18:47:12.657+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:47:12.658+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:47:12.981+0000] {hw1-checkpoint.py:53} INFO - /tmp/***_tmp_pws4nh1n
+[2024-09-24T18:47:12.984+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/RandomForestClassifier/datasets/X_test.pkl
+[2024-09-24T18:47:12.990+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:47:12.991+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:47:13.143+0000] {hw1-checkpoint.py:53} INFO - /tmp/***_tmp_idxee563
+[2024-09-24T18:47:13.145+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/RandomForestClassifier/datasets/y_train.pkl
+[2024-09-24T18:47:13.152+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:47:13.153+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:47:13.304+0000] {hw1-checkpoint.py:53} INFO - /tmp/***_tmp_5j_alvs3
+[2024-09-24T18:47:13.306+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/RandomForestClassifier/datasets/y_test.pkl
+[2024-09-24T18:47:13.314+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:47:13.314+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:47:13.643+0000] {hw1-checkpoint.py:53} INFO - /tmp/***_tmp_ufmv4q99
+[2024-09-24T18:47:13.647+0000] {logging_mixin.py:188} INFO - Fitting 5 folds for each of 4 candidates, totalling 20 fits
+[2024-09-24T18:47:13.651+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=None, min_samples_split=1, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.652+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=None, min_samples_split=1, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.653+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=None, min_samples_split=1, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.654+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=None, min_samples_split=1, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.655+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=None, min_samples_split=1, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.701+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=None, min_samples_split=10, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.747+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=None, min_samples_split=10, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.794+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=None, min_samples_split=10, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.838+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=None, min_samples_split=10, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.884+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=None, min_samples_split=10, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.885+0000] {logging_mixin.py:188} INFO - [CV] END .max_depth=30, min_samples_split=1, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.887+0000] {logging_mixin.py:188} INFO - [CV] END .max_depth=30, min_samples_split=1, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.888+0000] {logging_mixin.py:188} INFO - [CV] END .max_depth=30, min_samples_split=1, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.889+0000] {logging_mixin.py:188} INFO - [CV] END .max_depth=30, min_samples_split=1, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.891+0000] {logging_mixin.py:188} INFO - [CV] END .max_depth=30, min_samples_split=1, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.935+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=30, min_samples_split=10, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:13.978+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=30, min_samples_split=10, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:14.023+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=30, min_samples_split=10, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:14.069+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=30, min_samples_split=10, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:14.116+0000] {logging_mixin.py:188} INFO - [CV] END max_depth=30, min_samples_split=10, n_estimators=50; total time=   0.0s
+[2024-09-24T18:47:14.121+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:540 FitFailedWarning:
+10 fits failed out of a total of 20.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+10 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 888, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/base.py", line 1466, in wrapper
+    estimator._validate_params()
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/base.py", line 666, in _validate_params
+    validate_parameter_constraints(
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 95, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'min_samples_split' parameter of RandomForestClassifier must be an int in the range [2, inf) or a float in the range (0.0, 1.0]. Got 1 instead.
+[2024-09-24T18:47:14.123+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_search.py:1102 UserWarning: One or more of the test scores are non-finite: [       nan 0.81321777        nan 0.80755442]
+[2024-09-24T18:47:14.220+0000] {hw1-checkpoint.py:197} INFO - Finish model train.
+[2024-09-24T18:47:14.221+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-24T18:47:14.222+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-24T18:47:14.228+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=random_forest_classifier_dag, task_id=rfc_train_model, run_id=manual__2024-09-24T18:47:03.919011+00:00, execution_date=20240924T184703, start_date=20240924T184712, end_date=20240924T184714
+[2024-09-24T18:47:14.280+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-24T18:47:14.296+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-24T18:47:14.299+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

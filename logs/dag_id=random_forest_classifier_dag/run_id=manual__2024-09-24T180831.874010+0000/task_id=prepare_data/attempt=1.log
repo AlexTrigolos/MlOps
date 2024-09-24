@@ -1,0 +1,31 @@
+[2024-09-24T18:08:38.107+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-24T18:08:38.122+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: random_forest_classifier_dag.prepare_data manual__2024-09-24T18:08:31.874010+00:00 [queued]>
+[2024-09-24T18:08:38.130+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: random_forest_classifier_dag.prepare_data manual__2024-09-24T18:08:31.874010+00:00 [queued]>
+[2024-09-24T18:08:38.133+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-24T18:08:38.145+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): prepare_data> on 2024-09-24 18:08:31.874010+00:00
+[2024-09-24T18:08:38.152+0000] {standard_task_runner.py:64} INFO - Started process 36797 to run task
+[2024-09-24T18:08:38.155+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'random_forest_classifier_dag', 'prepare_data', 'manual__2024-09-24T18:08:31.874010+00:00', '--job-id', '426', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/hw1-checkpoint.py', '--cfg-path', '/tmp/tmp2kvojj79']
+[2024-09-24T18:08:38.157+0000] {standard_task_runner.py:91} INFO - Job 426: Subtask prepare_data
+[2024-09-24T18:08:38.200+0000] {task_command.py:426} INFO - Running <TaskInstance: random_forest_classifier_dag.prepare_data manual__2024-09-24T18:08:31.874010+00:00 [running]> on host 82997fc6deb7
+[2024-09-24T18:08:38.279+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='random_forest_classifier_dag' AIRFLOW_CTX_TASK_ID='prepare_data' AIRFLOW_CTX_EXECUTION_DATE='2024-09-24T18:08:31.874010+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-24T18:08:31.874010+00:00'
+[2024-09-24T18:08:38.281+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-24T18:08:38.289+0000] {hw1-checkpoint.py:113} INFO - Prepare data...
+[2024-09-24T18:08:38.290+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/RandomForestClassifier/datasets/dataset.pkl
+[2024-09-24T18:08:38.300+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:08:38.302+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:08:38.656+0000] {hw1-checkpoint.py:78} INFO - /tmp/***_tmp__zgdtv2v
+[2024-09-24T18:08:38.716+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:08:38.717+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:08:39.094+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:08:39.095+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:08:39.263+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:08:39.264+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:08:39.426+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:08:39.427+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:08:39.741+0000] {hw1-checkpoint.py:148} INFO - Prepared data.
+[2024-09-24T18:08:39.742+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-24T18:08:39.744+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-24T18:08:39.752+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=random_forest_classifier_dag, task_id=prepare_data, run_id=manual__2024-09-24T18:08:31.874010+00:00, execution_date=20240924T180831, start_date=20240924T180838, end_date=20240924T180839
+[2024-09-24T18:08:39.775+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-24T18:08:39.796+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-24T18:08:39.799+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

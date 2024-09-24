@@ -1,0 +1,2057 @@
+[2024-09-22T16:11:31.980+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-22T16:11:32.003+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train_dag.train_model manual__2024-09-22T16:11:20.796921+00:00 [queued]>
+[2024-09-22T16:11:32.014+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train_dag.train_model manual__2024-09-22T16:11:20.796921+00:00 [queued]>
+[2024-09-22T16:11:32.017+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-22T16:11:32.038+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): train_model> on 2024-09-22 16:11:20.796921+00:00
+[2024-09-22T16:11:32.056+0000] {standard_task_runner.py:64} INFO - Started process 89565 to run task
+[2024-09-22T16:11:32.060+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'train_dag', 'train_model', 'manual__2024-09-22T16:11:20.796921+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/train_dag-checkpoint.py', '--cfg-path', '/tmp/tmp_h9t8m0e']
+[2024-09-22T16:11:32.064+0000] {standard_task_runner.py:91} INFO - Job 72: Subtask train_model
+[2024-09-22T16:11:32.128+0000] {task_command.py:426} INFO - Running <TaskInstance: train_dag.train_model manual__2024-09-22T16:11:20.796921+00:00 [running]> on host 7264ce263e34
+[2024-09-22T16:11:32.272+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='train_dag' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2024-09-22T16:11:20.796921+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-22T16:11:20.796921+00:00'
+[2024-09-22T16:11:32.274+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-22T16:11:32.406+0000] {logging_mixin.py:188} INFO - Fitting 5 folds for each of 152 candidates, totalling 760 fits
+[2024-09-22T16:11:32.572+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:32.573+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=100; total time=   0.2s
+[2024-09-22T16:11:32.725+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:32.727+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=100; total time=   0.2s
+[2024-09-22T16:11:32.923+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:32.925+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=100; total time=   0.2s
+[2024-09-22T16:11:33.087+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:33.088+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=100; total time=   0.2s
+[2024-09-22T16:11:33.251+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:33.252+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=100; total time=   0.2s
+[2024-09-22T16:11:33.502+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:33.503+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=150; total time=   0.2s
+[2024-09-22T16:11:33.755+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:33.756+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=150; total time=   0.2s
+[2024-09-22T16:11:33.990+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:33.994+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=150; total time=   0.2s
+[2024-09-22T16:11:34.237+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:34.239+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=150; total time=   0.2s
+[2024-09-22T16:11:34.477+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:34.478+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=150; total time=   0.2s
+[2024-09-22T16:11:34.776+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:34.778+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=200; total time=   0.3s
+[2024-09-22T16:11:35.078+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:35.079+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=200; total time=   0.3s
+[2024-09-22T16:11:35.404+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:35.406+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=200; total time=   0.3s
+[2024-09-22T16:11:35.693+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:35.694+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=200; total time=   0.3s
+[2024-09-22T16:11:36.076+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:36.078+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=200; total time=   0.4s
+[2024-09-22T16:11:36.442+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:36.443+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=250; total time=   0.4s
+[2024-09-22T16:11:36.815+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:36.816+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=250; total time=   0.4s
+[2024-09-22T16:11:37.200+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:37.243+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=250; total time=   0.4s
+[2024-09-22T16:11:37.648+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:37.650+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=250; total time=   0.4s
+[2024-09-22T16:11:38.016+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:38.017+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=250; total time=   0.4s
+[2024-09-22T16:11:38.546+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:38.547+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=300; total time=   0.5s
+[2024-09-22T16:11:39.033+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:39.035+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=300; total time=   0.5s
+[2024-09-22T16:11:39.511+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:39.512+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=300; total time=   0.5s
+[2024-09-22T16:11:40.048+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:40.049+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=300; total time=   0.5s
+[2024-09-22T16:11:40.486+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:40.487+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=300; total time=   0.4s
+[2024-09-22T16:11:41.109+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:41.111+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=350; total time=   0.6s
+[2024-09-22T16:11:41.708+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:41.722+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=350; total time=   0.6s
+[2024-09-22T16:11:42.286+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:42.287+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=350; total time=   0.6s
+[2024-09-22T16:11:42.812+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:42.814+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=350; total time=   0.5s
+[2024-09-22T16:11:43.340+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:43.341+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=350; total time=   0.5s
+[2024-09-22T16:11:43.977+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:43.978+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=400; total time=   0.6s
+[2024-09-22T16:11:44.598+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:44.600+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=400; total time=   0.6s
+[2024-09-22T16:11:45.290+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:45.292+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=400; total time=   0.7s
+[2024-09-22T16:11:45.934+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:45.935+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=400; total time=   0.6s
+[2024-09-22T16:11:46.505+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:46.506+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=400; total time=   0.6s
+[2024-09-22T16:11:47.216+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:47.217+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=450; total time=   0.7s
+[2024-09-22T16:11:47.950+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:48.018+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=450; total time=   0.8s
+[2024-09-22T16:11:48.777+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:48.782+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=450; total time=   0.8s
+[2024-09-22T16:11:49.422+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:49.425+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=450; total time=   0.6s
+[2024-09-22T16:11:50.153+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:50.155+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=1, n_estimators=450; total time=   0.7s
+[2024-09-22T16:11:50.327+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:50.328+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=100; total time=   0.2s
+[2024-09-22T16:11:50.494+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:50.495+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=100; total time=   0.2s
+[2024-09-22T16:11:50.651+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:50.652+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=100; total time=   0.2s
+[2024-09-22T16:11:50.815+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:50.827+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=100; total time=   0.2s
+[2024-09-22T16:11:50.985+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:50.987+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=100; total time=   0.2s
+[2024-09-22T16:11:51.259+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:51.260+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=150; total time=   0.3s
+[2024-09-22T16:11:51.475+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:51.477+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=150; total time=   0.2s
+[2024-09-22T16:11:51.703+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:51.708+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=150; total time=   0.2s
+[2024-09-22T16:11:52.051+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:52.052+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=150; total time=   0.3s
+[2024-09-22T16:11:52.306+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:52.307+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=150; total time=   0.3s
+[2024-09-22T16:11:52.583+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:52.584+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=200; total time=   0.3s
+[2024-09-22T16:11:52.877+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:52.878+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=200; total time=   0.3s
+[2024-09-22T16:11:53.350+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:53.351+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=200; total time=   0.5s
+[2024-09-22T16:11:53.641+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:53.642+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=200; total time=   0.3s
+[2024-09-22T16:11:53.940+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:53.942+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=200; total time=   0.3s
+[2024-09-22T16:11:54.437+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:54.438+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=250; total time=   0.5s
+[2024-09-22T16:11:54.850+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:54.851+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=250; total time=   0.4s
+[2024-09-22T16:11:55.264+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:55.265+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=250; total time=   0.4s
+[2024-09-22T16:11:55.687+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:55.688+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=250; total time=   0.4s
+[2024-09-22T16:11:56.112+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:56.113+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=250; total time=   0.4s
+[2024-09-22T16:11:56.592+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:56.593+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=300; total time=   0.5s
+[2024-09-22T16:11:57.074+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:57.075+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=300; total time=   0.5s
+[2024-09-22T16:11:57.632+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:57.634+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=300; total time=   0.6s
+[2024-09-22T16:11:58.161+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:58.197+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=300; total time=   0.6s
+[2024-09-22T16:11:58.782+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:58.784+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=300; total time=   0.5s
+[2024-09-22T16:11:59.309+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:59.310+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=350; total time=   0.5s
+[2024-09-22T16:11:59.847+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:11:59.849+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=350; total time=   0.5s
+[2024-09-22T16:12:00.486+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:00.487+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=350; total time=   0.6s
+[2024-09-22T16:12:01.157+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:01.159+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=350; total time=   0.7s
+[2024-09-22T16:12:01.845+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:01.846+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=350; total time=   0.7s
+[2024-09-22T16:12:02.476+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:02.478+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=400; total time=   0.6s
+[2024-09-22T16:12:03.122+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:03.124+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=400; total time=   0.6s
+[2024-09-22T16:12:03.889+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:03.890+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=400; total time=   0.8s
+[2024-09-22T16:12:04.498+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:04.499+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=400; total time=   0.6s
+[2024-09-22T16:12:05.087+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:05.090+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=400; total time=   0.6s
+[2024-09-22T16:12:05.747+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:05.748+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=450; total time=   0.7s
+[2024-09-22T16:12:06.365+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:06.384+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=450; total time=   0.6s
+[2024-09-22T16:12:07.152+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:07.154+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=450; total time=   0.8s
+[2024-09-22T16:12:07.786+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:07.787+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=450; total time=   0.6s
+[2024-09-22T16:12:08.506+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:08.508+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=2, n_estimators=450; total time=   0.7s
+[2024-09-22T16:12:08.663+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:08.665+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:08.856+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:08.857+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:09.065+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:09.067+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:09.223+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:09.224+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:09.364+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:09.365+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=100; total time=   0.1s
+[2024-09-22T16:12:09.604+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:09.605+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=150; total time=   0.2s
+[2024-09-22T16:12:09.840+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:09.842+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=150; total time=   0.2s
+[2024-09-22T16:12:10.113+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:10.115+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=150; total time=   0.3s
+[2024-09-22T16:12:10.347+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:10.348+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=150; total time=   0.2s
+[2024-09-22T16:12:10.565+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:10.567+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=150; total time=   0.2s
+[2024-09-22T16:12:10.907+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:10.983+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=200; total time=   0.4s
+[2024-09-22T16:12:11.327+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:11.329+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=200; total time=   0.3s
+[2024-09-22T16:12:11.628+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:11.629+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=200; total time=   0.3s
+[2024-09-22T16:12:11.899+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:11.900+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=200; total time=   0.3s
+[2024-09-22T16:12:12.168+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:12.170+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=200; total time=   0.3s
+[2024-09-22T16:12:12.567+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:12.571+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=250; total time=   0.4s
+[2024-09-22T16:12:12.979+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:12.981+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=250; total time=   0.4s
+[2024-09-22T16:12:13.385+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:13.386+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=250; total time=   0.4s
+[2024-09-22T16:12:13.839+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:13.840+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=250; total time=   0.5s
+[2024-09-22T16:12:14.293+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:14.296+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=250; total time=   0.5s
+[2024-09-22T16:12:14.917+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:14.918+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=300; total time=   0.6s
+[2024-09-22T16:12:15.388+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:15.390+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=300; total time=   0.5s
+[2024-09-22T16:12:15.906+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:15.908+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=300; total time=   0.5s
+[2024-09-22T16:12:16.450+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:16.451+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=300; total time=   0.5s
+[2024-09-22T16:12:16.945+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:16.947+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=300; total time=   0.5s
+[2024-09-22T16:12:17.592+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:17.594+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=350; total time=   0.6s
+[2024-09-22T16:12:18.197+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:18.199+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=350; total time=   0.6s
+[2024-09-22T16:12:18.778+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:18.780+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=350; total time=   0.6s
+[2024-09-22T16:12:19.441+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:19.564+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=350; total time=   0.8s
+[2024-09-22T16:12:20.227+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:20.228+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=350; total time=   0.7s
+[2024-09-22T16:12:20.865+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:20.866+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=400; total time=   0.6s
+[2024-09-22T16:12:21.553+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:21.555+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=400; total time=   0.7s
+[2024-09-22T16:12:22.251+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:22.254+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=400; total time=   0.7s
+[2024-09-22T16:12:22.951+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:22.953+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=400; total time=   0.7s
+[2024-09-22T16:12:23.617+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:23.752+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=400; total time=   0.8s
+[2024-09-22T16:12:24.504+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:24.509+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=450; total time=   0.7s
+[2024-09-22T16:12:25.277+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:25.279+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=450; total time=   0.8s
+[2024-09-22T16:12:26.075+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:26.077+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=450; total time=   0.8s
+[2024-09-22T16:12:26.756+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:26.758+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=450; total time=   0.7s
+[2024-09-22T16:12:27.506+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:27.513+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=3, n_estimators=450; total time=   0.8s
+[2024-09-22T16:12:27.687+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:27.689+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:27.861+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:27.863+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:28.040+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:28.042+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:28.208+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:28.209+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:28.394+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:28.396+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:28.655+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:28.656+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=150; total time=   0.3s
+[2024-09-22T16:12:28.936+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:28.937+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=150; total time=   0.3s
+[2024-09-22T16:12:29.206+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:29.207+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=150; total time=   0.3s
+[2024-09-22T16:12:29.459+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:29.461+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=150; total time=   0.3s
+[2024-09-22T16:12:29.732+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:29.734+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=150; total time=   0.3s
+[2024-09-22T16:12:30.189+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:30.199+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=200; total time=   0.5s
+[2024-09-22T16:12:30.647+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:30.649+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=200; total time=   0.4s
+[2024-09-22T16:12:30.994+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:30.997+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=200; total time=   0.3s
+[2024-09-22T16:12:31.349+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:31.374+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=200; total time=   0.4s
+[2024-09-22T16:12:31.736+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:31.738+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=200; total time=   0.4s
+[2024-09-22T16:12:32.159+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:32.161+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=250; total time=   0.4s
+[2024-09-22T16:12:32.570+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:32.572+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=250; total time=   0.4s
+[2024-09-22T16:12:33.023+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:33.024+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=250; total time=   0.5s
+[2024-09-22T16:12:33.486+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:33.487+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=250; total time=   0.5s
+[2024-09-22T16:12:33.917+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:34.001+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=250; total time=   0.5s
+[2024-09-22T16:12:34.523+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:34.524+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=300; total time=   0.5s
+[2024-09-22T16:12:34.967+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:34.968+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=300; total time=   0.4s
+[2024-09-22T16:12:35.542+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:35.543+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=300; total time=   0.6s
+[2024-09-22T16:12:36.014+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:36.016+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=300; total time=   0.5s
+[2024-09-22T16:12:36.548+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:36.549+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=300; total time=   0.5s
+[2024-09-22T16:12:37.130+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:37.132+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=350; total time=   0.6s
+[2024-09-22T16:12:37.780+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:37.783+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=350; total time=   0.6s
+[2024-09-22T16:12:38.344+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:38.346+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=350; total time=   0.6s
+[2024-09-22T16:12:38.906+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:38.908+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=350; total time=   0.6s
+[2024-09-22T16:12:39.518+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:39.519+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=350; total time=   0.6s
+[2024-09-22T16:12:40.258+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:40.259+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=400; total time=   0.7s
+[2024-09-22T16:12:40.981+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:40.982+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=400; total time=   0.7s
+[2024-09-22T16:12:41.633+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:41.634+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=400; total time=   0.7s
+[2024-09-22T16:12:42.299+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:42.304+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=400; total time=   0.7s
+[2024-09-22T16:12:43.072+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:43.074+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=400; total time=   0.8s
+[2024-09-22T16:12:43.847+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:43.849+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=450; total time=   0.8s
+[2024-09-22T16:12:44.595+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:44.596+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=450; total time=   0.7s
+[2024-09-22T16:12:45.287+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:45.313+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=450; total time=   0.7s
+[2024-09-22T16:12:46.048+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:46.051+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=450; total time=   0.7s
+[2024-09-22T16:12:46.757+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:46.758+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=4, n_estimators=450; total time=   0.7s
+[2024-09-22T16:12:47.007+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:47.009+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=5, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:47.235+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:47.236+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=5, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:47.402+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:47.404+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=5, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:47.562+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:47.563+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=5, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:47.728+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:982 UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 971, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/usr/local/lib/python3.10/inspect.py", line 3112, in _bind
+    raise TypeError(
+TypeError: too many positional arguments
+[2024-09-22T16:12:47.730+0000] {logging_mixin.py:188} INFO - [CV] END ......................max_depth=5, n_estimators=100; total time=   0.2s
+[2024-09-22T16:12:47.885+0000] {local_task_job_runner.py:313} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2024-09-22T16:12:47.887+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-09-22T16:12:47.890+0000] {process_utils.py:132} INFO - Sending 15 to group 89565. PIDs of all processes in the group: [89565]
+[2024-09-22T16:12:47.891+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 89565
+[2024-09-22T16:12:47.892+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-09-22T16:12:47.894+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-22T16:12:47.906+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/train_dag-checkpoint.py", line 123, in train_model
+    grid_search.fit(X_train, y_train)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 1018, in fit
+    self._run_search(evaluate_candidates)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 1572, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 964, in evaluate_candidates
+    out = parallel(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/utils/parallel.py", line 74, in __call__
+    return super().__call__(iterable_with_config)
+  File "/home/airflow/.local/lib/python3.10/site-packages/joblib/parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/airflow/.local/lib/python3.10/site-packages/joblib/parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/utils/parallel.py", line 136, in __call__
+    return self.function(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 888, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/ensemble/_forest.py", line 489, in fit
+    trees = Parallel(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/utils/parallel.py", line 74, in __call__
+    return super().__call__(iterable_with_config)
+  File "/home/airflow/.local/lib/python3.10/site-packages/joblib/parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/airflow/.local/lib/python3.10/site-packages/joblib/parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/utils/parallel.py", line 136, in __call__
+    return self.function(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/ensemble/_forest.py", line 192, in _parallel_build_trees
+    tree._fit(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/tree/_classes.py", line 294, in _fit
+    check_classification_targets(y)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/utils/multiclass.py", line 211, in check_classification_targets
+    y_type = type_of_target(y, input_name="y")
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/utils/multiclass.py", line 397, in type_of_target
+    if xp.any(data != xp.astype(data, int)):
+  File "/home/airflow/.local/lib/python3.10/site-packages/sklearn/utils/_array_api.py", line 372, in __getattr__
+    def __getattr__(self, name):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2613, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2024-09-22T16:12:47.929+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=train_dag, task_id=train_model, run_id=manual__2024-09-22T16:11:20.796921+00:00, execution_date=20240922T161120, start_date=20240922T161132, end_date=20240922T161247
+[2024-09-22T16:12:47.984+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=89565, status='terminated', exitcode=2, started='16:11:31') (89565) terminated with exit code 2

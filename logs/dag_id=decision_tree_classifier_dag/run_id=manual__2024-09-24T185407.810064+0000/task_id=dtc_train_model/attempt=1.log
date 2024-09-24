@@ -1,0 +1,75 @@
+[2024-09-24T18:54:17.483+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-24T18:54:17.496+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: decision_tree_classifier_dag.dtc_train_model manual__2024-09-24T18:54:07.810064+00:00 [queued]>
+[2024-09-24T18:54:17.502+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: decision_tree_classifier_dag.dtc_train_model manual__2024-09-24T18:54:07.810064+00:00 [queued]>
+[2024-09-24T18:54:17.503+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-24T18:54:17.512+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): dtc_train_model> on 2024-09-24 18:54:07.810064+00:00
+[2024-09-24T18:54:17.522+0000] {standard_task_runner.py:64} INFO - Started process 48831 to run task
+[2024-09-24T18:54:17.524+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'decision_tree_classifier_dag', 'dtc_train_model', 'manual__2024-09-24T18:54:07.810064+00:00', '--job-id', '476', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/hw1-checkpoint.py', '--cfg-path', '/tmp/tmpt6aei_v8']
+[2024-09-24T18:54:17.526+0000] {standard_task_runner.py:91} INFO - Job 476: Subtask dtc_train_model
+[2024-09-24T18:54:17.562+0000] {task_command.py:426} INFO - Running <TaskInstance: decision_tree_classifier_dag.dtc_train_model manual__2024-09-24T18:54:07.810064+00:00 [running]> on host 82997fc6deb7
+[2024-09-24T18:54:17.622+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='decision_tree_classifier_dag' AIRFLOW_CTX_TASK_ID='dtc_train_model' AIRFLOW_CTX_EXECUTION_DATE='2024-09-24T18:54:07.810064+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-24T18:54:07.810064+00:00'
+[2024-09-24T18:54:17.625+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-24T18:54:17.634+0000] {hw1-checkpoint.py:145} INFO - Train model...
+[2024-09-24T18:54:17.634+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/DecisionTreeClassifier/datasets/X_train.pkl
+[2024-09-24T18:54:17.642+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:54:17.643+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:54:18.027+0000] {hw1-checkpoint.py:86} INFO - /tmp/***_tmp_bpxsh4bq
+[2024-09-24T18:54:18.030+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/DecisionTreeClassifier/datasets/X_test.pkl
+[2024-09-24T18:54:18.040+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:54:18.041+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:54:18.193+0000] {hw1-checkpoint.py:86} INFO - /tmp/***_tmp_8iywwmw_
+[2024-09-24T18:54:18.195+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/DecisionTreeClassifier/datasets/y_train.pkl
+[2024-09-24T18:54:18.202+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:54:18.202+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:54:18.360+0000] {hw1-checkpoint.py:86} INFO - /tmp/***_tmp_8eg_4zb0
+[2024-09-24T18:54:18.362+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/DecisionTreeClassifier/datasets/y_test.pkl
+[2024-09-24T18:54:18.368+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-09-24T18:54:18.369+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-09-24T18:54:18.721+0000] {hw1-checkpoint.py:86} INFO - /tmp/***_tmp_xs10f1hx
+[2024-09-24T18:54:18.727+0000] {logging_mixin.py:188} INFO - Fitting 5 folds for each of 4 candidates, totalling 20 fits
+[2024-09-24T18:54:18.730+0000] {logging_mixin.py:188} INFO - [CV] END ................max_depth=None, min_samples_split=1; total time=   0.0s
+[2024-09-24T18:54:18.732+0000] {logging_mixin.py:188} INFO - [CV] END ................max_depth=None, min_samples_split=1; total time=   0.0s
+[2024-09-24T18:54:18.733+0000] {logging_mixin.py:188} INFO - [CV] END ................max_depth=None, min_samples_split=1; total time=   0.0s
+[2024-09-24T18:54:18.734+0000] {logging_mixin.py:188} INFO - [CV] END ................max_depth=None, min_samples_split=1; total time=   0.0s
+[2024-09-24T18:54:18.735+0000] {logging_mixin.py:188} INFO - [CV] END ................max_depth=None, min_samples_split=1; total time=   0.0s
+[2024-09-24T18:54:18.740+0000] {logging_mixin.py:188} INFO - [CV] END ...............max_depth=None, min_samples_split=10; total time=   0.0s
+[2024-09-24T18:54:18.744+0000] {logging_mixin.py:188} INFO - [CV] END ...............max_depth=None, min_samples_split=10; total time=   0.0s
+[2024-09-24T18:54:18.748+0000] {logging_mixin.py:188} INFO - [CV] END ...............max_depth=None, min_samples_split=10; total time=   0.0s
+[2024-09-24T18:54:18.752+0000] {logging_mixin.py:188} INFO - [CV] END ...............max_depth=None, min_samples_split=10; total time=   0.0s
+[2024-09-24T18:54:18.756+0000] {logging_mixin.py:188} INFO - [CV] END ...............max_depth=None, min_samples_split=10; total time=   0.0s
+[2024-09-24T18:54:18.757+0000] {logging_mixin.py:188} INFO - [CV] END ...................max_depth=1, min_samples_split=1; total time=   0.0s
+[2024-09-24T18:54:18.759+0000] {logging_mixin.py:188} INFO - [CV] END ...................max_depth=1, min_samples_split=1; total time=   0.0s
+[2024-09-24T18:54:18.760+0000] {logging_mixin.py:188} INFO - [CV] END ...................max_depth=1, min_samples_split=1; total time=   0.0s
+[2024-09-24T18:54:18.761+0000] {logging_mixin.py:188} INFO - [CV] END ...................max_depth=1, min_samples_split=1; total time=   0.0s
+[2024-09-24T18:54:18.762+0000] {logging_mixin.py:188} INFO - [CV] END ...................max_depth=1, min_samples_split=1; total time=   0.0s
+[2024-09-24T18:54:18.766+0000] {logging_mixin.py:188} INFO - [CV] END ..................max_depth=1, min_samples_split=10; total time=   0.0s
+[2024-09-24T18:54:18.769+0000] {logging_mixin.py:188} INFO - [CV] END ..................max_depth=1, min_samples_split=10; total time=   0.0s
+[2024-09-24T18:54:18.773+0000] {logging_mixin.py:188} INFO - [CV] END ..................max_depth=1, min_samples_split=10; total time=   0.0s
+[2024-09-24T18:54:18.777+0000] {logging_mixin.py:188} INFO - [CV] END ..................max_depth=1, min_samples_split=10; total time=   0.0s
+[2024-09-24T18:54:18.781+0000] {logging_mixin.py:188} INFO - [CV] END ..................max_depth=1, min_samples_split=10; total time=   0.0s
+[2024-09-24T18:54:18.786+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:540 FitFailedWarning:
+10 fits failed out of a total of 20.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+10 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 888, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/base.py", line 1466, in wrapper
+    estimator._validate_params()
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/base.py", line 666, in _validate_params
+    validate_parameter_constraints(
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 95, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'min_samples_split' parameter of DecisionTreeClassifier must be an int in the range [2, inf) or a float in the range (0.0, 1.0]. Got 1 instead.
+[2024-09-24T18:54:18.788+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_search.py:1102 UserWarning: One or more of the test scores are non-finite: [      nan 0.786536        nan 0.7878755]
+[2024-09-24T18:54:18.838+0000] {hw1-checkpoint.py:171} INFO - Finish model train.
+[2024-09-24T18:54:18.840+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-24T18:54:18.841+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-24T18:54:18.847+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=decision_tree_classifier_dag, task_id=dtc_train_model, run_id=manual__2024-09-24T18:54:07.810064+00:00, execution_date=20240924T185407, start_date=20240924T185417, end_date=20240924T185418
+[2024-09-24T18:54:18.902+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-24T18:54:18.918+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-24T18:54:18.920+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
