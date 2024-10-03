@@ -1,0 +1,10 @@
+[2024-10-03T08:56:31.741+0000] {processor.py:161} INFO - Started process (PID=4406) to work on /opt/airflow/dags/.cache/pip/http/b/0/c/f/4/b0cf40d40f43e1a1b3e39a37feebe73420d6b60e72e41b9e1d13b4e6
+[2024-10-03T08:56:31.742+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/b/0/c/f/4/b0cf40d40f43e1a1b3e39a37feebe73420d6b60e72e41b9e1d13b4e6 for tasks to queue
+[2024-10-03T08:56:31.763+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:56:31.762+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/b/0/c/f/4/b0cf40d40f43e1a1b3e39a37feebe73420d6b60e72e41b9e1d13b4e6
+[2024-10-03T08:56:31.846+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/b/0/c/f/4/b0cf40d40f43e1a1b3e39a37feebe73420d6b60e72e41b9e1d13b4e6
+[2024-10-03T08:56:31.865+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/b/0/c/f/4/b0cf40d40f43e1a1b3e39a37feebe73420d6b60e72e41b9e1d13b4e6 took 0.129 seconds
+[2024-10-03T08:57:03.754+0000] {processor.py:161} INFO - Started process (PID=4658) to work on /opt/airflow/dags/.cache/pip/http/b/0/c/f/4/b0cf40d40f43e1a1b3e39a37feebe73420d6b60e72e41b9e1d13b4e6
+[2024-10-03T08:57:03.755+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/.cache/pip/http/b/0/c/f/4/b0cf40d40f43e1a1b3e39a37feebe73420d6b60e72e41b9e1d13b4e6 for tasks to queue
+[2024-10-03T08:57:03.756+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:57:03.756+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/.cache/pip/http/b/0/c/f/4/b0cf40d40f43e1a1b3e39a37feebe73420d6b60e72e41b9e1d13b4e6
+[2024-10-03T08:57:03.812+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/.cache/pip/http/b/0/c/f/4/b0cf40d40f43e1a1b3e39a37feebe73420d6b60e72e41b9e1d13b4e6
+[2024-10-03T08:57:03.825+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/.cache/pip/http/b/0/c/f/4/b0cf40d40f43e1a1b3e39a37feebe73420d6b60e72e41b9e1d13b4e6 took 0.076 seconds

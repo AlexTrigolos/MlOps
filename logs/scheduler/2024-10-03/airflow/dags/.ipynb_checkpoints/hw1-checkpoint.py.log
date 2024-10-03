@@ -1,0 +1,486 @@
+[2024-10-03T08:41:58.805+0000] {processor.py:161} INFO - Started process (PID=234) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:41:58.806+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:41:58.807+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:41:58.807+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:41:59.785+0000] {processor.py:840} INFO - DAG(s) 'random_forest_classifier_dag', 'decision_tree_classifier_dag', 'gradient_boosting_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:41:59.869+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:41:59.869+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:41:59.869+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:41:59.908+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:41:59.908+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:41:59.908+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:41:59.912+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:41:59.912+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:41:59.913+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:41:59.915+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:41:59.915+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:41:59.916+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:42:00.298+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:42:00.272+0000] {dagbag.py:654} ERROR - Failed to write serialized DAG: /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 642, in _serialize_dag_capturing_errors
+    dag_was_updated = SerializedDagModel.write_dag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/serialized_dag.py", line 158, in write_dag
+    if session.scalar(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1747, in scalar
+    return self.execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 724, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 604, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "serialized_dag_pkey"
+DETAIL:  Key (dag_id)=(random_forest_classifier_dag) already exists.
+
+[SQL: INSERT INTO serialized_dag (dag_id, fileloc, fileloc_hash, data, data_compressed, last_updated, dag_hash, processor_subdir) VALUES (%(dag_id)s, %(fileloc)s, %(fileloc_hash)s, %(data)s, %(data_compressed)s, %(last_updated)s, %(dag_hash)s, %(processor_subdir)s)]
+[parameters: ({'dag_id': 'random_forest_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "RandomForestClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 789177, tzinfo=Timezone('UTC')), 'dag_hash': '2d975dfc99fdb7816b02a6ddf0cdc0c5', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'decision_tree_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "DecisionTreeClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 853134, tzinfo=Timezone('UTC')), 'dag_hash': '00035448d85ef18d863bbb35a4f82247', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'gradient_boosting_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4636 characters truncated) ... ators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "GradientBoostingClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 861574, tzinfo=Timezone('UTC')), 'dag_hash': 'b051e43abca74dda4df72232277d214a', 'processor_subdir': '/opt/airflow/dags'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2024-10-03T08:42:00.299+0000] {logging_mixin.py:188} WARNING - Failed to write serialized DAG: /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 642, in _serialize_dag_capturing_errors
+    dag_was_updated = SerializedDagModel.write_dag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/serialized_dag.py", line 158, in write_dag
+    if session.scalar(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1747, in scalar
+    return self.execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 724, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 604, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "serialized_dag_pkey"
+DETAIL:  Key (dag_id)=(random_forest_classifier_dag) already exists.
+
+[SQL: INSERT INTO serialized_dag (dag_id, fileloc, fileloc_hash, data, data_compressed, last_updated, dag_hash, processor_subdir) VALUES (%(dag_id)s, %(fileloc)s, %(fileloc_hash)s, %(data)s, %(data_compressed)s, %(last_updated)s, %(dag_hash)s, %(processor_subdir)s)]
+[parameters: ({'dag_id': 'random_forest_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "RandomForestClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 789177, tzinfo=Timezone('UTC')), 'dag_hash': '2d975dfc99fdb7816b02a6ddf0cdc0c5', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'decision_tree_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "DecisionTreeClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 853134, tzinfo=Timezone('UTC')), 'dag_hash': '00035448d85ef18d863bbb35a4f82247', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'gradient_boosting_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4636 characters truncated) ... ators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "GradientBoostingClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 861574, tzinfo=Timezone('UTC')), 'dag_hash': 'b051e43abca74dda4df72232277d214a', 'processor_subdir': '/opt/airflow/dags'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2024-10-03T08:42:00.304+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:42:00.301+0000] {dagbag.py:654} ERROR - Failed to write serialized DAG: /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 642, in _serialize_dag_capturing_errors
+    dag_was_updated = SerializedDagModel.write_dag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/serialized_dag.py", line 158, in write_dag
+    if session.scalar(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1747, in scalar
+    return self.execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 724, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 604, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "serialized_dag_pkey"
+DETAIL:  Key (dag_id)=(random_forest_classifier_dag) already exists.
+
+[SQL: INSERT INTO serialized_dag (dag_id, fileloc, fileloc_hash, data, data_compressed, last_updated, dag_hash, processor_subdir) VALUES (%(dag_id)s, %(fileloc)s, %(fileloc_hash)s, %(data)s, %(data_compressed)s, %(last_updated)s, %(dag_hash)s, %(processor_subdir)s)]
+[parameters: ({'dag_id': 'random_forest_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "RandomForestClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 789177, tzinfo=Timezone('UTC')), 'dag_hash': '2d975dfc99fdb7816b02a6ddf0cdc0c5', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'decision_tree_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "DecisionTreeClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 853134, tzinfo=Timezone('UTC')), 'dag_hash': '00035448d85ef18d863bbb35a4f82247', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'gradient_boosting_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4636 characters truncated) ... ators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "GradientBoostingClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 861574, tzinfo=Timezone('UTC')), 'dag_hash': 'b051e43abca74dda4df72232277d214a', 'processor_subdir': '/opt/airflow/dags'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2024-10-03T08:42:00.305+0000] {logging_mixin.py:188} WARNING - Failed to write serialized DAG: /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 642, in _serialize_dag_capturing_errors
+    dag_was_updated = SerializedDagModel.write_dag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/serialized_dag.py", line 158, in write_dag
+    if session.scalar(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1747, in scalar
+    return self.execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 724, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 604, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "serialized_dag_pkey"
+DETAIL:  Key (dag_id)=(random_forest_classifier_dag) already exists.
+
+[SQL: INSERT INTO serialized_dag (dag_id, fileloc, fileloc_hash, data, data_compressed, last_updated, dag_hash, processor_subdir) VALUES (%(dag_id)s, %(fileloc)s, %(fileloc_hash)s, %(data)s, %(data_compressed)s, %(last_updated)s, %(dag_hash)s, %(processor_subdir)s)]
+[parameters: ({'dag_id': 'random_forest_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "RandomForestClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 789177, tzinfo=Timezone('UTC')), 'dag_hash': '2d975dfc99fdb7816b02a6ddf0cdc0c5', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'decision_tree_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "DecisionTreeClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 853134, tzinfo=Timezone('UTC')), 'dag_hash': '00035448d85ef18d863bbb35a4f82247', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'gradient_boosting_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4636 characters truncated) ... ators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "GradientBoostingClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 861574, tzinfo=Timezone('UTC')), 'dag_hash': 'b051e43abca74dda4df72232277d214a', 'processor_subdir': '/opt/airflow/dags'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2024-10-03T08:42:00.308+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:42:00.308+0000] {dagbag.py:654} ERROR - Failed to write serialized DAG: /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 642, in _serialize_dag_capturing_errors
+    dag_was_updated = SerializedDagModel.write_dag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/serialized_dag.py", line 158, in write_dag
+    if session.scalar(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1747, in scalar
+    return self.execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 724, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 604, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "serialized_dag_pkey"
+DETAIL:  Key (dag_id)=(random_forest_classifier_dag) already exists.
+
+[SQL: INSERT INTO serialized_dag (dag_id, fileloc, fileloc_hash, data, data_compressed, last_updated, dag_hash, processor_subdir) VALUES (%(dag_id)s, %(fileloc)s, %(fileloc_hash)s, %(data)s, %(data_compressed)s, %(last_updated)s, %(dag_hash)s, %(processor_subdir)s)]
+[parameters: ({'dag_id': 'random_forest_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "RandomForestClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 789177, tzinfo=Timezone('UTC')), 'dag_hash': '2d975dfc99fdb7816b02a6ddf0cdc0c5', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'decision_tree_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "DecisionTreeClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 853134, tzinfo=Timezone('UTC')), 'dag_hash': '00035448d85ef18d863bbb35a4f82247', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'gradient_boosting_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4636 characters truncated) ... ators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "GradientBoostingClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 861574, tzinfo=Timezone('UTC')), 'dag_hash': 'b051e43abca74dda4df72232277d214a', 'processor_subdir': '/opt/airflow/dags'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2024-10-03T08:42:00.308+0000] {logging_mixin.py:188} WARNING - Failed to write serialized DAG: /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 642, in _serialize_dag_capturing_errors
+    dag_was_updated = SerializedDagModel.write_dag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/serialized_dag.py", line 158, in write_dag
+    if session.scalar(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1747, in scalar
+    return self.execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 724, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 604, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "serialized_dag_pkey"
+DETAIL:  Key (dag_id)=(random_forest_classifier_dag) already exists.
+
+[SQL: INSERT INTO serialized_dag (dag_id, fileloc, fileloc_hash, data, data_compressed, last_updated, dag_hash, processor_subdir) VALUES (%(dag_id)s, %(fileloc)s, %(fileloc_hash)s, %(data)s, %(data_compressed)s, %(last_updated)s, %(dag_hash)s, %(processor_subdir)s)]
+[parameters: ({'dag_id': 'random_forest_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "RandomForestClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 789177, tzinfo=Timezone('UTC')), 'dag_hash': '2d975dfc99fdb7816b02a6ddf0cdc0c5', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'decision_tree_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "DecisionTreeClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 853134, tzinfo=Timezone('UTC')), 'dag_hash': '00035448d85ef18d863bbb35a4f82247', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'gradient_boosting_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4636 characters truncated) ... ators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "GradientBoostingClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 861574, tzinfo=Timezone('UTC')), 'dag_hash': 'b051e43abca74dda4df72232277d214a', 'processor_subdir': '/opt/airflow/dags'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2024-10-03T08:42:00.309+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:42:00.309+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:42:00.310+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:42:00.311+0000] {processor.py:186} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/dag_processing/processor.py", line 182, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/dag_processing/processor.py", line 163, in _handle_dag_file_processing
+    result: tuple[int, int] = dag_file_processor.process_file(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/dag_processing/processor.py", line 859, in process_file
+    serialize_errors = DagFileProcessor.save_dag_to_db(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/api_internal/internal_api_call.py", line 115, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/dag_processing/processor.py", line 895, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 664, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 680, in _sync_to_db
+    DAG.bulk_write_to_db(dags.values(), processor_subdir=processor_subdir, session=session)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 3101, in bulk_write_to_db
+    orm_dags: list[DagModel] = session.scalars(query).unique().all()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1778, in scalars
+    return self.execute(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 724, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 604, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "serialized_dag_pkey"
+DETAIL:  Key (dag_id)=(random_forest_classifier_dag) already exists.
+
+[SQL: INSERT INTO serialized_dag (dag_id, fileloc, fileloc_hash, data, data_compressed, last_updated, dag_hash, processor_subdir) VALUES (%(dag_id)s, %(fileloc)s, %(fileloc_hash)s, %(data)s, %(data_compressed)s, %(last_updated)s, %(dag_hash)s, %(processor_subdir)s)]
+[parameters: ({'dag_id': 'random_forest_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "RandomForestClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 789177, tzinfo=Timezone('UTC')), 'dag_hash': '2d975dfc99fdb7816b02a6ddf0cdc0c5', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'decision_tree_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4612 characters truncated) ... operators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "DecisionTreeClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 853134, tzinfo=Timezone('UTC')), 'dag_hash': '00035448d85ef18d863bbb35a4f82247', 'processor_subdir': '/opt/airflow/dags'}, {'dag_id': 'gradient_boosting_classifier_dag', 'fileloc': '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py', 'fileloc_hash': 68043759008795431, 'data': '{"__version": 1, "dag": {"default_args": {"__var": {"owner": "Alex Trigolos", "email": "alexvlg34@gmail.com", "email_on_failure": true, "email_on_ret ... (4636 characters truncated) ... ators.python", "_is_empty": false, "op_args": [], "op_kwargs": {"model_name": "GradientBoostingClassifier"}}], "dag_dependencies": [], "params": []}}', 'data_compressed': None, 'last_updated': datetime.datetime(2024, 10, 3, 8, 41, 59, 861574, tzinfo=Timezone('UTC')), 'dag_hash': 'b051e43abca74dda4df72232277d214a', 'processor_subdir': '/opt/airflow/dags'})]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2024-10-03T08:42:31.143+0000] {processor.py:161} INFO - Started process (PID=480) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:42:31.144+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:42:31.148+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:42:31.148+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:42:32.737+0000] {processor.py:840} INFO - DAG(s) 'random_forest_classifier_dag', 'decision_tree_classifier_dag', 'gradient_boosting_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:42:32.869+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:42:32.868+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:42:32.869+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:42:32.892+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:42:32.891+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:42:32.892+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:42:32.898+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:42:32.897+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:42:32.898+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:42:32.902+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:42:32.901+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:42:32.902+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:42:32.927+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.793 seconds
+[2024-10-03T08:43:03.294+0000] {processor.py:161} INFO - Started process (PID=718) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:43:03.300+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:43:03.304+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:43:03.303+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:43:05.063+0000] {processor.py:840} INFO - DAG(s) 'gradient_boosting_classifier_dag', 'random_forest_classifier_dag', 'decision_tree_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:43:05.103+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:43:05.103+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:43:05.104+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:43:05.139+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:43:05.139+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:05.140+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:05.148+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:43:05.148+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:05.154+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:05.158+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:43:05.158+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:05.159+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:05.210+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.927 seconds
+[2024-10-03T08:43:35.609+0000] {processor.py:161} INFO - Started process (PID=961) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:43:35.612+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:43:35.615+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:43:35.614+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:43:37.251+0000] {processor.py:840} INFO - DAG(s) 'random_forest_classifier_dag', 'gradient_boosting_classifier_dag', 'decision_tree_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:43:37.458+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:43:37.457+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:43:37.459+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:43:37.487+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:43:37.486+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:37.488+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:37.494+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:43:37.493+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:37.494+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:37.499+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:43:37.499+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:37.499+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:43:37.546+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.945 seconds
+[2024-10-03T08:44:08.081+0000] {processor.py:161} INFO - Started process (PID=1207) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:44:08.089+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:44:08.090+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:44:08.090+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:44:09.066+0000] {processor.py:840} INFO - DAG(s) 'gradient_boosting_classifier_dag', 'decision_tree_classifier_dag', 'random_forest_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:44:09.070+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:44:09.070+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:44:09.074+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:44:09.089+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:44:09.089+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:09.090+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:09.094+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:44:09.093+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:09.095+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:09.096+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:44:09.096+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:09.097+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:09.116+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.039 seconds
+[2024-10-03T08:44:39.690+0000] {processor.py:161} INFO - Started process (PID=1445) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:44:39.692+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:44:39.696+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:44:39.696+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:44:41.653+0000] {processor.py:840} INFO - DAG(s) 'gradient_boosting_classifier_dag', 'random_forest_classifier_dag', 'decision_tree_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:44:41.823+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:44:41.822+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:44:41.824+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:44:41.849+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:44:41.849+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:41.850+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:41.856+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:44:41.856+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:41.857+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:41.860+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:44:41.860+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:41.861+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:44:41.888+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 2.213 seconds
+[2024-10-03T08:45:14.251+0000] {processor.py:161} INFO - Started process (PID=1712) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:45:14.253+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:45:14.256+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:45:14.256+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:45:15.849+0000] {processor.py:840} INFO - DAG(s) 'gradient_boosting_classifier_dag', 'decision_tree_classifier_dag', 'random_forest_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:45:15.857+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:45:15.857+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:45:15.858+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:45:15.889+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:45:15.888+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:15.890+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:15.898+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:45:15.898+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:15.899+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:15.904+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:45:15.904+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:15.905+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:15.952+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.711 seconds
+[2024-10-03T08:45:47.752+0000] {processor.py:161} INFO - Started process (PID=1964) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:45:47.756+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:45:47.759+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:45:47.758+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:45:49.364+0000] {processor.py:840} INFO - DAG(s) 'decision_tree_classifier_dag', 'gradient_boosting_classifier_dag', 'random_forest_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:45:49.533+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:45:49.533+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:45:49.534+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:45:49.566+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:45:49.566+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:49.567+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:49.573+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:45:49.573+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:49.574+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:49.578+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:45:49.578+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:49.579+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:45:49.626+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.884 seconds
+[2024-10-03T08:46:20.913+0000] {processor.py:161} INFO - Started process (PID=2211) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:46:20.914+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:46:20.917+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:46:20.917+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:46:22.179+0000] {processor.py:840} INFO - DAG(s) 'gradient_boosting_classifier_dag', 'decision_tree_classifier_dag', 'random_forest_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:46:22.185+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:46:22.184+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:46:22.185+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:46:22.211+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:46:22.211+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:46:22.212+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:46:22.218+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:46:22.218+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:46:22.221+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:46:22.225+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:46:22.224+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:46:22.225+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:46:22.263+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.359 seconds
+[2024-10-03T08:47:08.117+0000] {processor.py:161} INFO - Started process (PID=2418) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:47:08.119+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:47:08.122+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:47:08.122+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:47:09.774+0000] {processor.py:840} INFO - DAG(s) 'random_forest_classifier_dag', 'gradient_boosting_classifier_dag', 'decision_tree_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:47:10.199+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:47:10.197+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:47:10.201+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:47:10.234+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:47:10.234+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:10.235+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:10.243+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:47:10.243+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:10.243+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:10.249+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:47:10.248+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:10.249+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:10.300+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 2.199 seconds
+[2024-10-03T08:47:41.704+0000] {processor.py:161} INFO - Started process (PID=2685) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:47:41.706+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:47:41.709+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:47:41.709+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:47:43.279+0000] {processor.py:840} INFO - DAG(s) 'random_forest_classifier_dag', 'gradient_boosting_classifier_dag', 'decision_tree_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:47:43.288+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:47:43.287+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:47:43.289+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:47:43.319+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:47:43.318+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:43.319+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:43.327+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:47:43.327+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:43.328+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:43.333+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:47:43.333+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:43.334+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:47:43.385+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.690 seconds
+[2024-10-03T08:48:15.038+0000] {processor.py:161} INFO - Started process (PID=2932) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:48:15.040+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:48:15.044+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:48:15.043+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:48:16.687+0000] {processor.py:840} INFO - DAG(s) 'decision_tree_classifier_dag', 'gradient_boosting_classifier_dag', 'random_forest_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:48:17.067+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:48:17.066+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:48:17.068+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:48:17.106+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:48:17.106+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:17.107+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:17.115+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:48:17.115+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:17.116+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:17.121+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:48:17.121+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:17.122+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:17.160+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 2.133 seconds
+[2024-10-03T08:48:48.079+0000] {processor.py:161} INFO - Started process (PID=3185) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:48:48.080+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:48:48.082+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:48:48.082+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:48:49.040+0000] {processor.py:840} INFO - DAG(s) 'decision_tree_classifier_dag', 'gradient_boosting_classifier_dag', 'random_forest_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:48:49.046+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:48:49.046+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:48:49.047+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:48:49.065+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:48:49.065+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:49.065+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:49.069+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:48:49.069+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:49.070+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:49.072+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:48:49.072+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:49.073+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:48:49.119+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.046 seconds
+[2024-10-03T08:49:20.327+0000] {processor.py:161} INFO - Started process (PID=3406) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:49:20.328+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:49:20.330+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:49:20.330+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:49:21.394+0000] {processor.py:840} INFO - DAG(s) 'decision_tree_classifier_dag', 'gradient_boosting_classifier_dag', 'random_forest_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:49:21.689+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:49:21.689+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:49:21.690+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:49:21.707+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:49:21.707+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:21.708+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:21.711+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:49:21.711+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:21.712+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:21.714+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:49:21.714+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:21.715+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:21.754+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.432 seconds
+[2024-10-03T08:49:52.828+0000] {processor.py:161} INFO - Started process (PID=3670) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:49:52.829+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:49:52.832+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:49:52.831+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:49:53.724+0000] {processor.py:840} INFO - DAG(s) 'decision_tree_classifier_dag', 'random_forest_classifier_dag', 'gradient_boosting_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:49:53.732+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:49:53.732+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:49:53.734+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:49:53.949+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:49:53.949+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:53.950+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:53.954+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:49:53.954+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:53.954+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:53.957+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:49:53.957+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:53.958+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:49:53.992+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.173 seconds
+[2024-10-03T08:50:25.007+0000] {processor.py:161} INFO - Started process (PID=3914) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:50:25.008+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:50:25.009+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:50:25.009+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:50:26.072+0000] {processor.py:840} INFO - DAG(s) 'gradient_boosting_classifier_dag', 'random_forest_classifier_dag', 'decision_tree_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:50:26.162+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:50:26.162+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:50:26.163+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:50:26.182+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:50:26.182+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:26.182+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:26.186+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:50:26.186+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:26.186+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:26.189+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:50:26.189+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:26.190+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:26.229+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.227 seconds
+[2024-10-03T08:50:56.686+0000] {processor.py:161} INFO - Started process (PID=4133) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:50:56.687+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:50:56.689+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:50:56.689+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:50:57.816+0000] {processor.py:840} INFO - DAG(s) 'random_forest_classifier_dag', 'decision_tree_classifier_dag', 'gradient_boosting_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:50:57.822+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:50:57.821+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:50:57.822+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:50:57.840+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:50:57.840+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:57.841+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:57.845+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:50:57.845+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:57.845+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:57.847+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:50:57.847+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:57.847+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:50:57.853+0000] {processor.py:186} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/dag_processing/processor.py", line 182, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/dag_processing/processor.py", line 163, in _handle_dag_file_processing
+    result: tuple[int, int] = dag_file_processor.process_file(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/dag_processing/processor.py", line 859, in process_file
+    serialize_errors = DagFileProcessor.save_dag_to_db(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/api_internal/internal_api_call.py", line 115, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/dag_processing/processor.py", line 895, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 664, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+  File "/home/airflow/.local/lib/python3.10/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 680, in _sync_to_db
+    DAG.bulk_write_to_db(dags.values(), processor_subdir=processor_subdir, session=session)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dag.py", line 3192, in bulk_write_to_db
+    DagCode.bulk_sync_to_db(filelocs, session=session)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagcode.py", line 119, in bulk_sync_to_db
+    os.path.getmtime(correct_maybe_zipped(fileloc)), tz=timezone.utc
+  File "/usr/local/lib/python3.10/genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py'
+[2024-10-03T08:56:29.071+0000] {processor.py:161} INFO - Started process (PID=4307) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:56:29.072+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:56:29.073+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:56:29.073+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:56:30.076+0000] {processor.py:840} INFO - DAG(s) 'decision_tree_classifier_dag', 'gradient_boosting_classifier_dag', 'random_forest_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:56:30.082+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:56:30.081+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:56:30.082+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:56:30.097+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:56:30.097+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:56:30.098+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:56:30.102+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:56:30.102+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:56:30.102+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:56:30.105+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:56:30.105+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:56:30.105+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:56:30.153+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.087 seconds
+[2024-10-03T08:57:01.291+0000] {processor.py:161} INFO - Started process (PID=4574) to work on /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:57:01.292+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py for tasks to queue
+[2024-10-03T08:57:01.293+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:57:01.292+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:57:02.317+0000] {processor.py:840} INFO - DAG(s) 'random_forest_classifier_dag', 'gradient_boosting_classifier_dag', 'decision_tree_classifier_dag' retrieved from /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py
+[2024-10-03T08:57:02.393+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:57:02.392+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2024-10-03T08:57:02.393+0000] {logging_mixin.py:188} WARNING - Sync 3 DAGs
+[2024-10-03T08:57:02.407+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:57:02.407+0000] {dag.py:3947} INFO - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:57:02.408+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for decision_tree_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:57:02.411+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:57:02.411+0000] {dag.py:3947} INFO - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:57:02.411+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for gradient_boosting_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:57:02.413+0000] {logging_mixin.py:188} INFO - [2024-10-03T08:57:02.413+0000] {dag.py:3947} INFO - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:57:02.414+0000] {logging_mixin.py:188} WARNING - Setting next_dagrun for random_forest_classifier_dag to 2024-10-03 01:00:00+00:00, run_after=2024-10-04 01:00:00+00:00
+[2024-10-03T08:57:02.429+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/airflow/dags/.ipynb_checkpoints/hw1-checkpoint.py took 1.143 seconds

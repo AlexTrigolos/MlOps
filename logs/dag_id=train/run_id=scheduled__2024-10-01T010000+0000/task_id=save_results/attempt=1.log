@@ -1,0 +1,24 @@
+[2024-10-02T13:55:24.584+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T13:55:24.613+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train.save_results scheduled__2024-10-01T01:00:00+00:00 [queued]>
+[2024-10-02T13:55:24.624+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train.save_results scheduled__2024-10-01T01:00:00+00:00 [queued]>
+[2024-10-02T13:55:24.627+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-02T13:55:24.646+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): save_results> on 2024-10-01 01:00:00+00:00
+[2024-10-02T13:55:24.659+0000] {standard_task_runner.py:64} INFO - Started process 1316 to run task
+[2024-10-02T13:55:24.664+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'train', 'save_results', 'scheduled__2024-10-01T01:00:00+00:00', '--job-id', '633', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/1_train_dag-checkpoint.py', '--cfg-path', '/tmp/tmpt3n5m8z3']
+[2024-10-02T13:55:24.667+0000] {standard_task_runner.py:91} INFO - Job 633: Subtask save_results
+[2024-10-02T13:55:24.741+0000] {task_command.py:426} INFO - Running <TaskInstance: train.save_results scheduled__2024-10-01T01:00:00+00:00 [running]> on host 82997fc6deb7
+[2024-10-02T13:55:24.868+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='train' AIRFLOW_CTX_TASK_ID='save_results' AIRFLOW_CTX_EXECUTION_DATE='2024-10-01T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-01T01:00:00+00:00'
+[2024-10-02T13:55:24.870+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T13:55:24.885+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path 2024/datasets/X_train.pkl
+[2024-10-02T13:55:24.901+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-02T13:55:24.902+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-02T13:55:25.530+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path 2024/datasets/X_test.pkl
+[2024-10-02T13:55:25.613+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path 2024/datasets/y_train.pkl
+[2024-10-02T13:55:25.690+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path 2024/datasets/y_test.pkl
+[2024-10-02T13:55:42.502+0000] {1_train_dag-checkpoint.py:165} INFO - Model trained.
+[2024-10-02T13:55:42.506+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-02T13:55:42.507+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T13:55:42.516+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=train, task_id=save_results, run_id=scheduled__2024-10-01T01:00:00+00:00, execution_date=20241001T010000, start_date=20241002T135524, end_date=20241002T135542
+[2024-10-02T13:55:42.572+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-10-02T13:55:42.585+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T13:55:42.588+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,13 @@
+{
+  "shell_port": 34073,
+  "iopub_port": 50597,
+  "stdin_port": 57013,
+  "control_port": 41307,
+  "hb_port": 42779,
+  "ip": "127.0.0.1",
+  "key": "1f4840ed-d95031cce14109c596fe5e5d",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "python3",
+  "jupyter_session": "/home/jovyan/airflow/dags/hw2.ipynb"
+}
