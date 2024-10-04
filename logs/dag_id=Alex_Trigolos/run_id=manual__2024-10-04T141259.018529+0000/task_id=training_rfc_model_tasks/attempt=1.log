@@ -1,0 +1,92 @@
+[2024-10-04T14:13:12.618+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-04T14:13:12.638+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Alex_Trigolos.training_rfc_model_tasks manual__2024-10-04T14:12:59.018529+00:00 [queued]>
+[2024-10-04T14:13:12.650+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Alex_Trigolos.training_rfc_model_tasks manual__2024-10-04T14:12:59.018529+00:00 [queued]>
+[2024-10-04T14:13:12.651+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-04T14:13:12.671+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): training_rfc_model_tasks> on 2024-10-04 14:12:59.018529+00:00
+[2024-10-04T14:13:12.679+0000] {standard_task_runner.py:64} INFO - Started process 9767 to run task
+[2024-10-04T14:13:12.685+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Alex_Trigolos', 'training_rfc_model_tasks', 'manual__2024-10-04T14:12:59.018529+00:00', '--job-id', '911', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/project-checkpoint.py', '--cfg-path', '/tmp/tmpe221n5a5']
+[2024-10-04T14:13:12.688+0000] {standard_task_runner.py:91} INFO - Job 911: Subtask training_rfc_model_tasks
+[2024-10-04T14:13:12.736+0000] {task_command.py:426} INFO - Running <TaskInstance: Alex_Trigolos.training_rfc_model_tasks manual__2024-10-04T14:12:59.018529+00:00 [running]> on host 4b5f1410d111
+[2024-10-04T14:13:12.846+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='Alex_Trigolos' AIRFLOW_CTX_TASK_ID='training_rfc_model_tasks' AIRFLOW_CTX_EXECUTION_DATE='2024-10-04T14:12:59.018529+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-04T14:12:59.018529+00:00'
+[2024-10-04T14:13:12.847+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-04T14:13:12.861+0000] {project-checkpoint.py:162} INFO - Train model...
+[2024-10-04T14:13:12.881+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/project/datasets/X_train.pkl
+[2024-10-04T14:13:12.891+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T14:13:12.892+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T14:13:13.120+0000] {project-checkpoint.py:92} INFO - /tmp/***_tmp_tfxqkfw2
+[2024-10-04T14:13:13.124+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/project/datasets/X_val.pkl
+[2024-10-04T14:13:13.133+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T14:13:13.133+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T14:13:13.329+0000] {project-checkpoint.py:92} INFO - /tmp/***_tmp_5s66pfl7
+[2024-10-04T14:13:13.333+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/project/datasets/X_test.pkl
+[2024-10-04T14:13:13.341+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T14:13:13.342+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T14:13:13.833+0000] {project-checkpoint.py:92} INFO - /tmp/***_tmp_xe0ajsf8
+[2024-10-04T14:13:13.837+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/project/datasets/y_train.pkl
+[2024-10-04T14:13:13.844+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T14:13:13.845+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T14:13:14.021+0000] {project-checkpoint.py:92} INFO - /tmp/***_tmp_h85jkglc
+[2024-10-04T14:13:14.024+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/project/datasets/y_val.pkl
+[2024-10-04T14:13:14.032+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T14:13:14.034+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T14:13:14.203+0000] {project-checkpoint.py:92} INFO - /tmp/***_tmp__e_3in4p
+[2024-10-04T14:13:14.206+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/project/datasets/y_test.pkl
+[2024-10-04T14:13:14.213+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T14:13:14.214+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T14:13:14.404+0000] {project-checkpoint.py:92} INFO - /tmp/***_tmp_vtbqxu7h
+[2024-10-04T14:13:14.500+0000] {logging_mixin.py:188} WARNING - 2024/10/04 14:13:14 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2024-10-04T14:13:14.537+0000] {logging_mixin.py:188} INFO - Fitting 5 folds for each of 1071 candidates, totalling 5355 fits
+[2024-10-04T14:35:55.417+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py:540 FitFailedWarning:
+765 fits failed out of a total of 5355.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+765 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_validation.py", line 888, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/base.py", line 1466, in wrapper
+    estimator._validate_params()
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/base.py", line 666, in _validate_params
+    validate_parameter_constraints(
+  File "/home/***/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 95, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'min_samples_split' parameter of RandomForestClassifier must be an int in the range [2, inf) or a float in the range (0.0, 1.0]. Got 1 instead.
+[2024-10-04T14:35:55.450+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/sklearn/model_selection/_search.py:1102 UserWarning: One or more of the test scores are non-finite: [       nan        nan        nan ... 0.81038117 0.81319807 0.81879248]
+[2024-10-04T14:35:55.513+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/mlflow/types/utils.py:406 UserWarning: Hint: Inferred schema contains integer column(s). Integer columns in Python cannot represent missing values. If your input data contains missing values at inference time, it will be encoded as floats and will cause a schema enforcement error. The best way to avoid this problem is to infer the model schema based on a realistic data sample (training dataset) that includes missing values. Alternatively, you can declare integer columns as doubles (float64) whenever these columns may have missing values. See `Handling Integers With Missing Values <https://www.mlflow.org/docs/latest/models.html#handling-integers-with-missing-values>`_ for more details.
+[2024-10-04T14:35:59.826+0000] {credentials.py:1147} INFO - Found credentials in environment variables.
+[2024-10-04T14:35:59.902+0000] {configprovider.py:957} INFO - Found endpoint for s3 via: environment_global.
+[2024-10-04T14:36:00.429+0000] {logging_mixin.py:188} WARNING - Registered model 'sk-learn-RandomForestClassifier-model' already exists. Creating a new version of this model...
+[2024-10-04T14:36:00.484+0000] {logging_mixin.py:188} WARNING - 2024/10/04 14:36:00 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: sk-learn-RandomForestClassifier-model, version 5
+[2024-10-04T14:36:00.484+0000] {logging_mixin.py:188} WARNING - Created version '5' of model 'sk-learn-RandomForestClassifier-model'.
+[2024-10-04T14:36:01.821+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/mlflow/types/utils.py:406 UserWarning: Hint: Inferred schema contains integer column(s). Integer columns in Python cannot represent missing values. If your input data contains missing values at inference time, it will be encoded as floats and will cause a schema enforcement error. The best way to avoid this problem is to infer the model schema based on a realistic data sample (training dataset) that includes missing values. Alternatively, you can declare integer columns as doubles (float64) whenever these columns may have missing values. See `Handling Integers With Missing Values <https://www.mlflow.org/docs/latest/models.html#handling-integers-with-missing-values>`_ for more details.
+[2024-10-04T14:36:01.884+0000] {logging_mixin.py:188} WARNING - 2024/10/04 14:36:01 INFO mlflow.models.evaluation.default_evaluator: Computing model predictions.
+[2024-10-04T14:36:01.895+0000] {logging_mixin.py:188} WARNING - 2024/10/04 14:36:01 INFO mlflow.models.evaluation.default_evaluator: The evaluation dataset is inferred as binary dataset, positive label is 1, negative label is 0.
+[2024-10-04T14:36:01.918+0000] {logging_mixin.py:188} WARNING - 2024/10/04 14:36:01 INFO mlflow.models.evaluation.default_evaluator: Testing metrics on first row...
+[2024-10-04T14:36:03.528+0000] {logging_mixin.py:188} WARNING - 2024/10/04 14:36:03 WARNING mlflow.models.evaluation.default_evaluator: Skip logging model explainability insights because the shap explainer None requires all feature values to be numeric, and each feature column must only contain scalar values.
+[2024-10-04T14:36:03.595+0000] {logging_mixin.py:188} WARNING - 2024/10/04 14:36:03 INFO mlflow.tracking._tracking_service.client: 🏃 View run RandomForestClassifier at: http://mlflow-service:5000/#/experiments/128330878462801848/runs/c39e5b2642004efc89c90d33655fdb4e.
+[2024-10-04T14:36:03.596+0000] {logging_mixin.py:188} WARNING - 2024/10/04 14:36:03 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://mlflow-service:5000/#/experiments/128330878462801848.
+[2024-10-04T14:36:03.609+0000] {project-checkpoint.py:206} INFO - Finish model train.
+[2024-10-04T14:36:03.610+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-04T14:36:03.611+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-04T14:36:03.621+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Alex_Trigolos, task_id=training_rfc_model_tasks, run_id=manual__2024-10-04T14:12:59.018529+00:00, execution_date=20241004T141259, start_date=20241004T141312, end_date=20241004T143603
+[2024-10-04T14:36:03.713+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-10-04T14:36:03.741+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-04T14:36:03.745+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

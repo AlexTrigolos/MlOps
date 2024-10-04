@@ -1,0 +1,35 @@
+[2024-10-04T12:11:57.456+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-04T12:11:57.483+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Alex_Trigolos.task_prepare_data manual__2024-10-04T12:11:48.038823+00:00 [queued]>
+[2024-10-04T12:11:57.494+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Alex_Trigolos.task_prepare_data manual__2024-10-04T12:11:48.038823+00:00 [queued]>
+[2024-10-04T12:11:57.495+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-04T12:11:57.509+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): task_prepare_data> on 2024-10-04 12:11:48.038823+00:00
+[2024-10-04T12:11:57.521+0000] {standard_task_runner.py:64} INFO - Started process 62656 to run task
+[2024-10-04T12:11:57.524+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Alex_Trigolos', 'task_prepare_data', 'manual__2024-10-04T12:11:48.038823+00:00', '--job-id', '831', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/project-checkpoint.py', '--cfg-path', '/tmp/tmpq9kl5wwe']
+[2024-10-04T12:11:57.527+0000] {standard_task_runner.py:91} INFO - Job 831: Subtask task_prepare_data
+[2024-10-04T12:11:57.585+0000] {task_command.py:426} INFO - Running <TaskInstance: Alex_Trigolos.task_prepare_data manual__2024-10-04T12:11:48.038823+00:00 [running]> on host 4b5f1410d111
+[2024-10-04T12:11:57.677+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='Alex_Trigolos' AIRFLOW_CTX_TASK_ID='task_prepare_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-04T12:11:48.038823+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-04T12:11:48.038823+00:00'
+[2024-10-04T12:11:57.679+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-04T12:11:57.693+0000] {project-checkpoint.py:132} INFO - Prepare data...
+[2024-10-04T12:11:57.694+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket testmlops with path AlexTrigolos/project/datasets/dataset.pkl
+[2024-10-04T12:11:57.705+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T12:11:57.706+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T12:11:57.985+0000] {project-checkpoint.py:93} INFO - /tmp/***_tmp_vsknhabh
+[2024-10-04T12:11:58.082+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T12:11:58.084+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T12:11:58.632+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T12:11:58.633+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T12:11:59.116+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T12:11:59.118+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T12:11:59.323+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T12:11:59.324+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T12:11:59.528+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T12:11:59.529+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T12:11:59.728+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T12:11:59.729+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T12:11:59.923+0000] {project-checkpoint.py:162} INFO - Prepared data.
+[2024-10-04T12:11:59.924+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-04T12:11:59.925+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-04T12:11:59.939+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Alex_Trigolos, task_id=task_prepare_data, run_id=manual__2024-10-04T12:11:48.038823+00:00, execution_date=20241004T121148, start_date=20241004T121157, end_date=20241004T121159
+[2024-10-04T12:12:00.028+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-10-04T12:12:00.064+0000] {taskinstance.py:3503} INFO - 3 downstream tasks scheduled from follow-on schedule check
+[2024-10-04T12:12:00.068+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

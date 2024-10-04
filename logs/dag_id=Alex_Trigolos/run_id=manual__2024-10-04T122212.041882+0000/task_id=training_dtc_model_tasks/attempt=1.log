@@ -1,0 +1,135 @@
+[2024-10-04T12:22:30.073+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-04T12:22:30.098+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Alex_Trigolos.training_dtc_model_tasks manual__2024-10-04T12:22:12.041882+00:00 [queued]>
+[2024-10-04T12:22:30.110+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Alex_Trigolos.training_dtc_model_tasks manual__2024-10-04T12:22:12.041882+00:00 [queued]>
+[2024-10-04T12:22:30.113+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-04T12:22:30.132+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): training_dtc_model_tasks> on 2024-10-04 12:22:12.041882+00:00
+[2024-10-04T12:22:30.142+0000] {standard_task_runner.py:64} INFO - Started process 69003 to run task
+[2024-10-04T12:22:30.146+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Alex_Trigolos', 'training_dtc_model_tasks', 'manual__2024-10-04T12:22:12.041882+00:00', '--job-id', '846', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/project-checkpoint.py', '--cfg-path', '/tmp/tmp71dpbwe5']
+[2024-10-04T12:22:30.150+0000] {standard_task_runner.py:91} INFO - Job 846: Subtask training_dtc_model_tasks
+[2024-10-04T12:22:30.221+0000] {task_command.py:426} INFO - Running <TaskInstance: Alex_Trigolos.training_dtc_model_tasks manual__2024-10-04T12:22:12.041882+00:00 [running]> on host 4b5f1410d111
+[2024-10-04T12:22:30.348+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='Alex_Trigolos' AIRFLOW_CTX_TASK_ID='training_dtc_model_tasks' AIRFLOW_CTX_EXECUTION_DATE='2024-10-04T12:22:12.041882+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-04T12:22:12.041882+00:00'
+[2024-10-04T12:22:30.350+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-04T12:22:30.374+0000] {project-checkpoint.py:166} INFO - Train model...
+[2024-10-04T12:22:30.392+0000] {project-checkpoint.py:169} INFO - 283999804300596507
+[2024-10-04T12:22:30.403+0000] {project-checkpoint.py:171} INFO - 2a81423b553b4040b6a0b0851eadb459
+[2024-10-04T12:22:30.410+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-04T12:22:30.411+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/project-checkpoint.py", line 172, in train_model
+    _LOG.info(mlflow.get_run(parent_run_id))
+  File "/home/airflow/.local/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 624, in get_run
+    return MlflowClient().get_run(run_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/mlflow/tracking/client.py", line 226, in get_run
+    return self._tracking_client.get_run(run_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 104, in get_run
+    return self.store.get_run(run_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/mlflow/store/tracking/file_store.py", line 678, in get_run
+    run_info = self._get_run_info(run_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/mlflow/store/tracking/file_store.py", line 702, in _get_run_info
+    raise MlflowException(
+mlflow.exceptions.MlflowException: Run '2a81423b553b4040b6a0b0851eadb459' not found
+[2024-10-04T12:22:30.442+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=Alex_Trigolos, task_id=training_dtc_model_tasks, run_id=manual__2024-10-04T12:22:12.041882+00:00, execution_date=20241004T122212, start_date=20241004T122230, end_date=20241004T122230
+[2024-10-04T12:22:30.495+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.10/site-packages/***/utils/email.py:154 RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2024-10-04T12:22:30.497+0000] {configuration.py:1053} WARNING - section/key [smtp/smtp_user] not found in config
+[2024-10-04T12:22:30.498+0000] {email.py:271} INFO - Email alerting: attempt 1
+[2024-10-04T12:22:30.510+0000] {configuration.py:1053} WARNING - section/key [smtp/smtp_user] not found in config
+[2024-10-04T12:22:30.512+0000] {email.py:271} INFO - Email alerting: attempt 1
+[2024-10-04T12:22:30.517+0000] {taskinstance.py:879} ERROR - Failed to send email to: alexvlg34@gmail.com
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2479, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode, session=session)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2676, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2701, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/airflow/dags/.ipynb_checkpoints/project-checkpoint.py", line 172, in train_model
+    _LOG.info(mlflow.get_run(parent_run_id))
+  File "/home/airflow/.local/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 624, in get_run
+    return MlflowClient().get_run(run_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/mlflow/tracking/client.py", line 226, in get_run
+    return self._tracking_client.get_run(run_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 104, in get_run
+    return self.store.get_run(run_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/mlflow/store/tracking/file_store.py", line 678, in get_run
+    run_info = self._get_run_info(run_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/mlflow/store/tracking/file_store.py", line 702, in _get_run_info
+    raise MlflowException(
+mlflow.exceptions.MlflowException: Run '2a81423b553b4040b6a0b0851eadb459' not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1063, in _email_alert
+    send_email(task.email, subject, html_content)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 80, in send_email
+    return backend(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 154, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 273, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 317, in _get_smtp_connection
+    return smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.10/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/local/lib/python3.10/socket.py", line 845, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/socket.py", line 833, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 877, in _handle_failure
+    task_instance.email_alert(error, failure_context["task"])
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 3163, in email_alert
+    _email_alert(task_instance=self, exception=exception, task=task)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1065, in _email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 80, in send_email
+    return backend(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 154, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 273, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/email.py", line 317, in _get_smtp_connection
+    return smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.10/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.10/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/local/lib/python3.10/socket.py", line 845, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/socket.py", line 833, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+[2024-10-04T12:22:30.547+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 846 for task training_dtc_model_tasks (Run '2a81423b553b4040b6a0b0851eadb459' not found; 69003)
+[2024-10-04T12:22:30.602+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-10-04T12:22:30.638+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-04T12:22:30.642+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

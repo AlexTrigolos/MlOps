@@ -1,0 +1,20 @@
+[2024-10-04T06:38:43.530+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-04T06:38:43.545+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train.download_data scheduled__2024-10-03T01:00:00+00:00 [queued]>
+[2024-10-04T06:38:43.553+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train.download_data scheduled__2024-10-03T01:00:00+00:00 [queued]>
+[2024-10-04T06:38:43.554+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-04T06:38:43.566+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): download_data> on 2024-10-03 01:00:00+00:00
+[2024-10-04T06:38:43.576+0000] {standard_task_runner.py:64} INFO - Started process 49118 to run task
+[2024-10-04T06:38:43.579+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'train', 'download_data', 'scheduled__2024-10-03T01:00:00+00:00', '--job-id', '771', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/1_train_dag-checkpoint.py', '--cfg-path', '/tmp/tmpcxv0fxxx']
+[2024-10-04T06:38:43.582+0000] {standard_task_runner.py:91} INFO - Job 771: Subtask download_data
+[2024-10-04T06:38:43.632+0000] {task_command.py:426} INFO - Running <TaskInstance: train.download_data scheduled__2024-10-03T01:00:00+00:00 [running]> on host 4b5f1410d111
+[2024-10-04T06:38:43.708+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='train' AIRFLOW_CTX_TASK_ID='download_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-03T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-03T01:00:00+00:00'
+[2024-10-04T06:38:43.710+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-04T06:38:43.752+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T06:38:43.753+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T06:38:44.525+0000] {1_train_dag-checkpoint.py:80} INFO - Data downloaded.
+[2024-10-04T06:38:44.527+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-04T06:38:44.528+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-04T06:38:44.538+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=train, task_id=download_data, run_id=scheduled__2024-10-03T01:00:00+00:00, execution_date=20241003T010000, start_date=20241004T063843, end_date=20241004T063844
+[2024-10-04T06:38:44.597+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-10-04T06:38:44.624+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-04T06:38:44.629+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

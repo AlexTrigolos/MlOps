@@ -1,0 +1,21 @@
+[2024-10-04T15:43:58.786+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-04T15:43:58.810+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Alex_Trigolos.task_save_results manual__2024-10-04T14:12:59.018529+00:00 [queued]>
+[2024-10-04T15:43:58.822+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Alex_Trigolos.task_save_results manual__2024-10-04T14:12:59.018529+00:00 [queued]>
+[2024-10-04T15:43:58.825+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-04T15:43:58.853+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): task_save_results> on 2024-10-04 14:12:59.018529+00:00
+[2024-10-04T15:43:58.876+0000] {standard_task_runner.py:64} INFO - Started process 58798 to run task
+[2024-10-04T15:43:58.880+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Alex_Trigolos', 'task_save_results', 'manual__2024-10-04T14:12:59.018529+00:00', '--job-id', '913', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/project.py', '--cfg-path', '/tmp/tmpyzj3gkl0']
+[2024-10-04T15:43:58.883+0000] {standard_task_runner.py:91} INFO - Job 913: Subtask task_save_results
+[2024-10-04T15:43:58.937+0000] {task_command.py:426} INFO - Running <TaskInstance: Alex_Trigolos.task_save_results manual__2024-10-04T14:12:59.018529+00:00 [running]> on host 4b5f1410d111
+[2024-10-04T15:43:59.042+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='Alex_Trigolos' AIRFLOW_CTX_TASK_ID='task_save_results' AIRFLOW_CTX_EXECUTION_DATE='2024-10-04T14:12:59.018529+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-04T14:12:59.018529+00:00'
+[2024-10-04T15:43:59.044+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-04T15:43:59.061+0000] {project.py:210} INFO - Save metrics...
+[2024-10-04T15:43:59.197+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2024-10-04T15:43:59.198+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2024-10-04T15:43:59.957+0000] {project.py:240} INFO - DONE!!!
+[2024-10-04T15:43:59.960+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-04T15:43:59.961+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-04T15:43:59.977+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Alex_Trigolos, task_id=task_save_results, run_id=manual__2024-10-04T14:12:59.018529+00:00, execution_date=20241004T141259, start_date=20241004T154358, end_date=20241004T154359
+[2024-10-04T15:44:00.018+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-10-04T15:44:00.064+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-04T15:44:00.095+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

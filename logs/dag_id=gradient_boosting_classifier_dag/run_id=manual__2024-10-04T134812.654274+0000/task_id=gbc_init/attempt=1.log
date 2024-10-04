@@ -1,0 +1,18 @@
+[2024-10-04T13:48:14.540+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-04T13:48:14.552+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gradient_boosting_classifier_dag.gbc_init manual__2024-10-04T13:48:12.654274+00:00 [queued]>
+[2024-10-04T13:48:14.557+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gradient_boosting_classifier_dag.gbc_init manual__2024-10-04T13:48:12.654274+00:00 [queued]>
+[2024-10-04T13:48:14.558+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-04T13:48:14.567+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): gbc_init> on 2024-10-04 13:48:12.654274+00:00
+[2024-10-04T13:48:14.573+0000] {standard_task_runner.py:64} INFO - Started process 93585 to run task
+[2024-10-04T13:48:14.576+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'gradient_boosting_classifier_dag', 'gbc_init', 'manual__2024-10-04T13:48:12.654274+00:00', '--job-id', '886', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/hw1.py', '--cfg-path', '/tmp/tmpo3ej6yoz']
+[2024-10-04T13:48:14.577+0000] {standard_task_runner.py:91} INFO - Job 886: Subtask gbc_init
+[2024-10-04T13:48:14.612+0000] {task_command.py:426} INFO - Running <TaskInstance: gradient_boosting_classifier_dag.gbc_init manual__2024-10-04T13:48:12.654274+00:00 [running]> on host 4b5f1410d111
+[2024-10-04T13:48:14.682+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='gradient_boosting_classifier_dag' AIRFLOW_CTX_TASK_ID='gbc_init' AIRFLOW_CTX_EXECUTION_DATE='2024-10-04T13:48:12.654274+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-04T13:48:12.654274+00:00'
+[2024-10-04T13:48:14.683+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-04T13:48:14.691+0000] {hw1.py:84} INFO - Train pipeline started.
+[2024-10-04T13:48:14.711+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-04T13:48:14.712+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-04T13:48:14.720+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=gradient_boosting_classifier_dag, task_id=gbc_init, run_id=manual__2024-10-04T13:48:12.654274+00:00, execution_date=20241004T134812, start_date=20241004T134814, end_date=20241004T134814
+[2024-10-04T13:48:14.749+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-10-04T13:48:14.768+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-04T13:48:14.770+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

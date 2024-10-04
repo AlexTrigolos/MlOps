@@ -1,0 +1,37 @@
+[2024-10-04T13:55:45.152+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-04T13:55:45.164+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Alex_Trigolos.task_init manual__2024-10-04T13:55:42.778700+00:00 [queued]>
+[2024-10-04T13:55:45.170+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Alex_Trigolos.task_init manual__2024-10-04T13:55:42.778700+00:00 [queued]>
+[2024-10-04T13:55:45.171+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-04T13:55:45.182+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): task_init> on 2024-10-04 13:55:42.778700+00:00
+[2024-10-04T13:55:45.191+0000] {standard_task_runner.py:64} INFO - Started process 98692 to run task
+[2024-10-04T13:55:45.194+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Alex_Trigolos', 'task_init', 'manual__2024-10-04T13:55:42.778700+00:00', '--job-id', '899', '--raw', '--subdir', 'DAGS_FOLDER/***/dags/.ipynb_checkpoints/project-checkpoint.py', '--cfg-path', '/tmp/tmp1c8egf9o']
+[2024-10-04T13:55:45.196+0000] {standard_task_runner.py:91} INFO - Job 899: Subtask task_init
+[2024-10-04T13:55:45.236+0000] {task_command.py:426} INFO - Running <TaskInstance: Alex_Trigolos.task_init manual__2024-10-04T13:55:42.778700+00:00 [running]> on host 4b5f1410d111
+[2024-10-04T13:55:45.301+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexvlg34@gmail.com' AIRFLOW_CTX_DAG_OWNER='Alex Trigolos' AIRFLOW_CTX_DAG_ID='Alex_Trigolos' AIRFLOW_CTX_TASK_ID='task_init' AIRFLOW_CTX_EXECUTION_DATE='2024-10-04T13:55:42.778700+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-04T13:55:42.778700+00:00'
+[2024-10-04T13:55:45.302+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-04T13:55:45.311+0000] {project-checkpoint.py:101} INFO - Train pipeline started.
+[2024-10-04T13:55:45.313+0000] {project-checkpoint.py:102} INFO - http://mlflow-service:5000
+[2024-10-04T13:55:45.393+0000] {logging_mixin.py:188} WARNING - 2024/10/04 13:55:45 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2024-10-04T13:55:45.429+0000] {logging_mixin.py:188} WARNING - 2024/10/04 13:55:45 INFO mlflow.tracking._tracking_service.client: 🏃 View run ursatap at: http://mlflow-service:5000/#/experiments/423933594460121322/runs/bec50cb58e314918a4ab3996e27d7c10.
+[2024-10-04T13:55:45.430+0000] {logging_mixin.py:188} WARNING - 2024/10/04 13:55:45 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://mlflow-service:5000/#/experiments/423933594460121322.
+[2024-10-04T13:55:45.468+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-04T13:55:45.469+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-04T13:55:45.476+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Alex_Trigolos, task_id=task_init, run_id=manual__2024-10-04T13:55:42.778700+00:00, execution_date=20241004T135542, start_date=20241004T135545, end_date=20241004T135545
+[2024-10-04T13:55:45.527+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-10-04T13:55:45.547+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-04T13:55:45.549+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
